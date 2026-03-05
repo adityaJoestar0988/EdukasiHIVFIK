@@ -272,6 +272,63 @@
     box-shadow: 0 7px 20px rgba(229,57,53,0.38);
   }
 
+  /* ============ ABCDE PENCEGAHAN ============ */
+  .abcde-list { display: flex; flex-direction: column; gap: 18px; }
+
+  .abcde-item { }
+
+  .abcde-row {
+    display: flex; align-items: center; gap: 16px;
+    cursor: pointer; user-select: none;
+  }
+
+  .abcde-letter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 68px; font-weight: 900;
+    line-height: 1; flex-shrink: 0; width: 72px; text-align: center;
+    text-shadow:
+      3px 3px 0 #fff,
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      4px 6px 8px rgba(0,0,0,0.25);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
+
+  .abcde-right { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+
+  .abcde-btn {
+    background: var(--blue-mid); color: white;
+    border: none; border-radius: 8px;
+    padding: 10px 18px; font-size: 15px; font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    text-align: left; cursor: pointer;
+    transition: background 0.2s;
+    width: fit-content;
+  }
+  .abcde-row:hover .abcde-btn,
+  .abcde-item.open .abcde-btn { background: var(--blue); }
+
+  .abcde-bar {
+    height: 10px; background: var(--blue-mid);
+    border-radius: 6px; width: 100%;
+    transition: background 0.2s;
+  }
+  .abcde-row:hover .abcde-bar,
+  .abcde-item.open .abcde-bar { background: var(--blue); }
+
+  .abcde-desc {
+    display: none;
+    background: var(--blue-mid); color: white;
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 14px; line-height: 1.75; font-weight: 600;
+    margin-left: 88px;
+    margin-top: 6px;
+  }
+  .abcde-item.open .abcde-desc { display: block; }
+
+  .reveal.delay-5 { transition-delay: 0.4s; }
+
   /* ============ ARTIKEL PAGE ============ */
   .artikel-grid {
     display: grid;
@@ -745,38 +802,27 @@
       <div class="acc-panel" id="panel-epidemiologi">
         <div class="acc-panel-inner">
           <div class="acc-panel-imgs">
-            <div class="acc-panel-img" style="background:linear-gradient(180deg,#1a3a8f,#1565c0)">💉</div>
-            <div class="acc-panel-img" style="background:linear-gradient(180deg,#1565c0,#0d47a1)">🩸</div>
-            <div class="acc-panel-img" style="background:linear-gradient(180deg,#0d47a1,#0a2f7a)">🤱</div>
+            <div class="acc-panel-img" style="background:linear-gradient(180deg,#1a3a8f,#1565c0)">🌍</div>
+            <div class="acc-panel-img" style="background:linear-gradient(180deg,#1565c0,#0d47a1)">📊</div>
+            <div class="acc-panel-img" style="background:linear-gradient(180deg,#0d47a1,#0a2f7a)">🏥</div>
           </div>
           <div class="acc-panel-text">
-            <p><strong>Data HIV/AIDS di Indonesia dan Dunia:</strong></p>
-            <br>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
+            <p style="line-height:1.85;font-size:14px;">
+              Menurut <strong>World Health Organization (WHO)</strong>, HIV masih menjadi masalah kesehatan global dengan angka kematian sekitar <strong style="color:#ffd600">1,6%</strong> pada tahun 2022 dan jumlah penderita meningkat menjadi <strong style="color:#ffd600">39 juta orang</strong>. Sebagian besar kasus berada di <strong>Afrika</strong>, sementara <strong>Asia Tenggara</strong> menyumbang sekitar <strong style="color:#ffd600">10%</strong>. Data <strong>UNAIDS</strong> juga mencatat <strong style="color:#ffd600">1,3 juta kasus AIDS</strong> pada tahun 2022, sehingga Indonesia perlu meningkatkan kewaspadaan terhadap penularan HIV/AIDS.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:16px">
               <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px;text-align:center">
                 <div style="font-size:20px;font-weight:900;color:#ffd600">39 Jt</div>
                 <div style="font-size:11px;opacity:0.85">ODHA di dunia (2022)</div>
               </div>
               <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px;text-align:center">
-                <div style="font-size:20px;font-weight:900;color:#ffd600">519 Rb</div>
-                <div style="font-size:11px;opacity:0.85">ODHA di Indonesia</div>
+                <div style="font-size:20px;font-weight:900;color:#ffd600">1,6%</div>
+                <div style="font-size:11px;opacity:0.85">Angka kematian (2022)</div>
               </div>
               <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px;text-align:center">
                 <div style="font-size:20px;font-weight:900;color:#ffd600">1,3 Jt</div>
-                <div style="font-size:11px;opacity:0.85">Infeksi baru/tahun</div>
+                <div style="font-size:11px;opacity:0.85">Kasus AIDS baru (2022)</div>
               </div>
-              <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:10px;text-align:center">
-                <div style="font-size:20px;font-weight:900;color:#ffd600">57%</div>
-                <div style="font-size:11px;opacity:0.85">Yang tahu statusnya</div>
-              </div>
-            </div>
-            <p style="font-size:12px;margin-bottom:6px;font-weight:800;">5 Provinsi Kasus Tertinggi (Kemenkes RI, 2023):</p>
-            <div style="display:flex;flex-direction:column;gap:5px">
-              <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;min-width:90px">Jawa Timur</span><div style="flex:1;height:10px;background:rgba(255,255,255,0.15);border-radius:5px"><div style="width:100%;height:100%;background:#e53935;border-radius:5px"></div></div><span style="font-size:11px;min-width:45px;text-align:right">76.816</span></div>
-              <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;min-width:90px">DKI Jakarta</span><div style="flex:1;height:10px;background:rgba(255,255,255,0.15);border-radius:5px"><div style="width:92%;height:100%;background:#e57373;border-radius:5px"></div></div><span style="font-size:11px;min-width:45px;text-align:right">70.879</span></div>
-              <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;min-width:90px">Jawa Barat</span><div style="flex:1;height:10px;background:rgba(255,255,255,0.15);border-radius:5px"><div style="width:72%;height:100%;background:#ef9a9a;border-radius:5px"></div></div><span style="font-size:11px;min-width:45px;text-align:right">55.231</span></div>
-              <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;min-width:90px">Papua</span><div style="flex:1;height:10px;background:rgba(255,255,255,0.15);border-radius:5px"><div style="width:61%;height:100%;background:#ffcdd2;border-radius:5px"></div></div><span style="font-size:11px;min-width:45px;text-align:right">47.010</span></div>
-              <div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;min-width:90px">Jawa Tengah</span><div style="flex:1;height:10px;background:rgba(255,255,255,0.15);border-radius:5px"><div style="width:54%;height:100%;background:#ffcdd2;border-radius:5px"></div></div><span style="font-size:11px;min-width:45px;text-align:right">41.298</span></div>
             </div>
           </div>
         </div>
@@ -798,27 +844,14 @@
     <div class="acc-item reveal delay-1">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">🤱</span>
-        Fase Akut (2–4 minggu setelah infeksi)
+        Fase Akut 
         <span class="acc-arrow">▼</span>
       </button>
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Disebut juga sebagai <strong>Acute Retroviral Syndrome (ARS)</strong>. Pada fase ini virus HIV berkembang biak dengan cepat dalam tubuh. Sebagian besar orang mengalami gejala mirip flu yang berlangsung 2–4 minggu.</p>
-            <br>
-            <p><strong>Gejala umum fase akut:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>🌡️ Demam tinggi (38–39°C)</li>
-              <li>😓 Berkeringat di malam hari</li>
-              <li>💪 Nyeri otot dan sendi</li>
-              <li>🔴 Ruam kulit (rash)</li>
-              <li>😮‍💨 Sakit tenggorokan</li>
-              <li>🫁 Pembengkakan kelenjar getah bening</li>
-              <li>😵 Sakit kepala dan kelelahan ekstrem</li>
-              <li>🤢 Mual, muntah, dan diare</li>
-            </ul>
-            <br>
-            <p>⚠️ Pada fase ini viral load sangat tinggi dan risiko penularan sangat besar, namun tes HIV standar belum tentu positif.</p>
+            <p> <strong>Fase akut atau infeksi primer </strong> HIV umumnya terjadi 2–4 minggu setelah paparan, dengan gejala menyerupai flu seperti demam, kelelahan, ruam, sakit kepala, pembengkakan kelenjar getah bening, dan diare. Pada tahap ini terjadi kerusakan signifikan pada sistem imun, termasuk hilangnya hingga 60% sel CD4 memori dalam dua minggu pertama, penurunan fungsi kelenjar timus, serta kerusakan lapisan usus yang berperan penting dalam pertahanan tubuh (Chéret, 2025). </p>
+            <br><p>Pada ibu hamil, fase akut juga muncul dalam rentang waktu yang sama dengan keluhan seperti demam, nyeri tenggorokan, ruam, pembesaran kelenjar getah bening, serta nyeri otot dan sendi. Selama periode ini, viral load sangat tinggi sehingga meningkatkan risiko transmisi dari ibu ke janin. Proses ini menandai awal destruksi sel CD4 yang melemahkan sistem kekebalan ibu hamil. Jika tidak terdeteksi dan ditangani secara dini, infeksi akan berlanjut ke fase latensi klinis, di mana virus tetap bereplikasi aktif meskipun gejala tidak selalu tampak jelas (Hastuti et al., 2022).</p>
           </div>
         </div>
       </div>
@@ -828,23 +861,13 @@
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">❤️</span>
-        Fase Laten (Kronis) — Hingga 10 tahun
+        Fase Laten 
         <span class="acc-arrow">▼</span>
       </button>
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Disebut juga <strong>fase asimtomatik</strong>. Virus tetap aktif namun berkembang biak sangat lambat. Penderita umumnya tidak merasakan gejala atau hanya mengalami gejala ringan.</p>
-            <br>
-            <p>Tanpa pengobatan ARV, fase ini dapat berlangsung rata-rata 10 tahun. Dengan terapi ARV yang tepat, fase ini dapat berlangsung jauh lebih lama bahkan seumur hidup dengan kualitas hidup yang baik.</p>
-            <br>
-            <p><strong>Ciri-ciri fase laten:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Tidak ada atau sedikit gejala</li>
-              <li>CD4 secara perlahan menurun</li>
-              <li>Masih dapat menularkan HIV</li>
-              <li>Pembesaran kelenjar getah bening persisten</li>
-            </ul>
+            <p>HIV Fase Laten: Virus bereplikasi secara aktif di dalam tubuh, namun penderita umumnya tidak menunjukkan gejala klinis yang nyata atau bersifat asimtomatik. Kementerian Kesehatan Republik Indonesia,( 2022). Pada Ibu hamil dengan HIV dalam fase laten ini menjadi sumber penularan HIV bagi orang lain maupun bagi janinnya melalui penularan vertikal. Jika tidak segera dideteksi dan ditangani, kondisi ini dapat berkembang ke tahap yang lebih berat yang ditandai dengan gejala klinis nyata seperti demam persisten di atas 38°C, penurunan berat badan lebih dari 10% dalam tiga bulan, pembengkakan kelenjar getah bening, keringat malam, hingga kelemahan tubuh yang ekstrem (Pravitasari, et al.,2022). </p>
           </div>
         </div>
       </div>
@@ -854,23 +877,13 @@
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">🎗️</span>
-        Fase AIDS (Stadium Lanjut)
+        Fase AIDS 
         <span class="acc-arrow">▼</span>
       </button>
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Fase ini terjadi ketika <strong>jumlah CD4 turun di bawah 200 sel/μL</strong>. Sistem imun sangat lemah sehingga rentan terhadap infeksi dan penyakit yang tidak berbahaya bagi orang sehat.</p>
-            <br>
-            <p><strong>Infeksi oportunistik yang sering terjadi:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>🫁 Pneumocystis jirovecii Pneumonia (PCP)</li>
-              <li>🧠 Toxoplasmosis otak</li>
-              <li>👁️ CMV Retinitis (kebutaan)</li>
-              <li>🔴 Kandidiasis esofagus</li>
-              <li>🦠 Tuberkulosis (TB) — co-infeksi paling umum</li>
-              <li>Limfoma atau sarkoma Kaposi</li>
-            </ul>
+           <p><strong>AIDS (Acquired Immunodeficiency Syndrome)</strong> adalah tahap akhir dari infeksi HIV yang ditandai dengan penurunan fungsi sistem kekebalan tubuh secara berat, ditunjukkan oleh jumlah CD4 kurang dari 200 sel/mm³ atau munculnya infeksi oportunistik seperti tuberkulosis, kandidiasis, dan pneumonia oportunistik. Kondisi ini berdampak pada menurunnya kualitas hidup serta meningkatnya risiko kematian. Pada ibu hamil yang mengalami AIDS, keadaan tersebut tidak hanya memperbesar kemungkinan terjadinya komplikasi kehamilan, seperti anemia, infeksi berat, dan persalinan prematur, tetapi juga meningkatkan risiko penularan HIV dari ibu ke bayi (mother-to-child transmission) apabila tidak diberikan upaya pencegahan dan terapi antiretroviral secara optimal.</p>
           </div>
         </div>
       </div>
@@ -886,21 +899,7 @@
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p><strong>Dampak fisik jangka panjang HIV/AIDS:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:8px">
-              <li>Penurunan berat badan drastis (wasting syndrome)</li>
-              <li>Kelelahan kronis yang mengganggu aktivitas sehari-hari</li>
-              <li>Kerusakan sistem saraf (neuropati perifer)</li>
-              <li>Gangguan fungsi ginjal dan hati</li>
-              <li>Risiko penyakit kardiovaskular meningkat</li>
-              <li>Kerusakan tulang dan osteoporosis</li>
-              <li>Anemia dan gangguan darah</li>
-            </ul>
-            <br>
-            <p>Dengan terapi ARV modern, banyak dampak fisik dapat dicegah atau diminimalkan secara signifikan.</p>
-          </div>
-          <div class="acc-content-imgs">
-            <div class="acc-img-placeholder">💪</div>
+            <p>Dampak fisik HIV/AIDS meliputi kondisi inflamasi kronis yang menyerupai penuaan dini organ, meningkatkan risiko penyakit jantung akibat aterosklerosis, penurunan kepadatan tulang (osteoporosis), gangguan metabolisme yang dapat menyebabkan diabetes dan obesitas visceral, serta penurunan massa otot dan kelelahan kronis. Selain itu, dapat terjadi gangguan kognitif (HAND) meskipun sudah menjalani terapi ARV. Pada ibu hamil, HIV menyebabkan imunosupresi berat akibat penurunan sel CD4 sehingga rentan terhadap infeksi oportunistik seperti kandidiasis, gangguan pernapasan, dan diare kronis, serta berisiko mengalami wasting syndrome yang dapat meningkatkan risiko kematian maternal apabila tidak ditangani secara optimal.</p>
           </div>
         </div>
       </div>
@@ -916,17 +915,9 @@
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Dampak psikologis pada ODHA (Orang Dengan HIV/AIDS) sangat signifikan dan perlu mendapat perhatian serius:</p>
-            <ul style="padding-left:18px;line-height:2;margin-top:8px">
-              <li>😰 Kecemasan dan depresi berkepanjangan</li>
-              <li>😔 Rasa takut akan kematian dan masa depan</li>
-              <li>😞 Perasaan bersalah, malu, dan harga diri rendah</li>
-              <li>😶 Isolasi sosial akibat stigma</li>
-              <li>🛌 Gangguan tidur (insomnia)</li>
-              <li>Sulit berkonsentrasi dan gangguan kognitif</li>
-            </ul>
+            <p>Secara psikologis, sebagian besar orang dengan HIV/AIDS (ODHA) mengalami tekanan mental yang signifikan setelah mengetahui status kesehatannya. Reaksi awal yang umum muncul adalah penolakan terhadap diagnosis. Kondisi ini sering berkembang menjadi stres berat dan depresi. Pada sejumlah kasus, beban psikologis tersebut dapat disertai munculnya pikiran untuk mengakhiri hidup akibat perasaan putus asa, ketidakpastian masa depan, serta menurunnya makna diri. Beberapa studi melaporkan bahwa sekitar sepertiga ODHA pernah mengalami ide untuk mengakhiri hidup. Selain itu, stigma dan diskriminasi sosial yang masih terjadi di masyarakat turut memperparah kecemasan, sehingga mendorong ODHA untuk menarik diri dari lingkungan sosialnya (Syam, 2025).</p>
             <br>
-            <p>Dukungan psikologis, konseling, dan kelompok dukungan sebaya sangat penting untuk meningkatkan kualitas hidup ODHA.</p>
+            <p>Evaluasi kondisi kesehatan mental, khususnya pada ibu hamil dengan HIV, menjadi aspek yang sangat penting dalam upaya pencegahan gangguan psikologis yang lebih berat. Ibu hamil yang hidup dengan HIV memiliki risiko lebih tinggi mengalami depresi, kecemasan, dan stres prenatal. Kondisi tersebut berkaitan dengan penurunan kualitas kesehatan ibu maupun bayi. Penelitian yang dilakukan oleh Tibebu et al. (2023) menekankan pentingnya pengukuran tingkat gangguan mental pada ibu hamil dengan HIV di Ethiopia, mengingat stabilitas emosional ibu berperan penting dalam mendukung tumbuh kembang anak serta mencegah penularan HIV yang lebih luas.</p>
           </div>
         </div>
       </div>
@@ -942,17 +933,7 @@
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Stigma dan diskriminasi terhadap ODHA masih menjadi tantangan besar dalam penanganan HIV/AIDS di Indonesia.</p>
-            <br>
-            <p><strong>Bentuk stigma yang sering terjadi:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:8px">
-              <li>Penolakan dari keluarga dan lingkungan sosial</li>
-              <li>Diskriminasi di tempat kerja</li>
-              <li>Pelayanan kesehatan yang tidak setara</li>
-              <li>Label negatif di masyarakat</li>
-            </ul>
-            <br>
-            <p><strong>HIV BUKAN aib!</strong> ODHA berhak mendapatkan perlakuan yang bermartabat, layanan kesehatan yang setara, dan dukungan sosial tanpa diskriminasi. Edukasi adalah kunci untuk mengurangi stigma.</p>
+            <p>Stigma terhadap orang dengan HIV/AIDS masih kerap terjadi akibat kurangnya pemahaman masyarakat mengenai cara penularan dan pengelolaannya. Pandangan negatif, rasa takut berinteraksi, hingga perilaku menjauhi penderita dapat menimbulkan dampak psikologis seperti sedih, malu, cemas, dan rendah diri. Stigma juga membuat sebagian orang enggan mengungkapkan status kesehatannya atau mencari layanan medis, sehingga berpengaruh pada kualitas hidup dan keberhasilan terapi. Kondisi serupa dialami ibu hamil dengan HIV, yang kerap merasa takut terhadap penilaian sosial sehingga ragu menjalani pemeriksaan dan pengobatan. Situasi ini berpotensi meningkatkan risiko kesehatan bagi ibu maupun bayinya (Ninef et al., 2023).</p>
           </div>
         </div>
       </div>
@@ -972,122 +953,48 @@
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">🤰</span>
-        Risiko Penularan Ibu ke Bayi (MTCT)
+        Resiko Ibu ke Bayi
         <span class="acc-arrow">▼</span>
       </button>
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p><strong>Mother-to-Child Transmission (MTCT)</strong> atau transmisi vertikal adalah penularan HIV dari ibu yang terinfeksi kepada bayinya.</p>
+            <p>Lebih dari 90% kasus HIV pada bayi terjadi akibat penularan dari ibu kepada anak.Penularan tersebut dapat berlangsung selama masa kehamilan, pada prosespersalinan, maupun saat menyusui. Mother-to-Child Transmission (MTCT) atautransmisi vertikal adalah penularan HIV dari ibu yang terinfeksi kepada bayinya.Kapan penularan bisa terjadi?</p>
             <br>
             <p><strong>Kapan penularan bisa terjadi?</strong></p>
             <ul style="padding-left:18px;line-height:2;margin-top:6px">
               <li>🤰 Selama kehamilan (in utero) — risiko 5–10%</li>
+            
+              <p>Selama hamil, HIV yang ada di dalam darah ibu bisa melewati plasenta dan masuk
+ke tubuh janin. Plasenta sebenarnya berfungsi sebagai pelindung antara ibu dan
+bayi, tetapi jika jumlah virus dalam darah ibu tinggi dan ibu tidak menjalani terapi
+antiretroviral (ARV), virus dapat menembus pertahanan tersebut. Akibatnya, bayi
+bisa terinfeksi sejak masih di dalam kandungan.</p><br>
+
               <li>🏥 Saat persalinan (intrapartum) — risiko 10–20%</li>
+              
+              <p>Risiko penularan lebih besar saat proses melahirkan. Bayi dapat terpapar darah
+dan cairan vagina ibu yang mengandung HIV ketika melewati jalan lahir. Kontak
+langsung ini memungkinkan virus masuk ke tubuh bayi melalui mulut, mata, atau
+luka kecil yang mungkin terjadi selama proses persalinan.</p><br>
+
               <li>🍼 Saat menyusui — risiko 5–20%</li>
+              
+              <p>HIV juga dapat terdapat dalam ASI. Virus bisa masuk ke tubuh bayi melalui lapisan
+saluran cerna yang masih sensitif dan belum matang. Jika ada luka kecil di mulut
+atau gangguan pada saluran pencernaan bayi, risiko penularan dapat meningkat.</p><br>
             </ul>
             <br>
-            <p>Tanpa intervensi apapun, risiko total MTCT berkisar <strong>15–45%</strong>. Dengan terapi ARV dan intervensi yang tepat, risiko dapat diturunkan menjadi <strong>kurang dari 2%</strong>.</p>
-          </div>
-          <div class="acc-content-imgs">
-            <div class="acc-img-placeholder">🤰</div>
-            <div class="acc-img-placeholder">👶</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🧪</span>
-        Pemeriksaan & Tes HIV pada Ibu Hamil
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p>Tes HIV merupakan bagian dari pemeriksaan antenatal (ANC) rutin yang direkomendasikan untuk semua ibu hamil.</p>
-            <br>
-            <p><strong>Jenis pemeriksaan:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Rapid test HIV (3S: Sensitif, Spesifik, Berbeda reagen)</li>
-              <li>CD4 count — menilai kondisi imun</li>
-              <li>Viral load — memantau jumlah virus</li>
-              <li>PPIA (Program Pencegahan Penularan HIV dari Ibu ke Anak)</li>
-            </ul>
-            <br>
-            <p>💡 Semakin dini diketahui, semakin efektif pencegahan penularan ke bayi dapat dilakukan.</p>
+            <p>Namun, risiko penularan dari ibu ke bayi dapat ditekan hingga sangat rendah
+apabila ibu rutin mengonsumsi obat ARV selama kehamilan, mendapatkan
+penanganan persalinan yang tepat, serta bayi menerima obat pencegahan
+setelah lahir sesuai anjuran tenaga kesehatan.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">💊</span>
-        ARV untuk Ibu Hamil (PMTCT)
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p><strong>PMTCT (Prevention of Mother-to-Child Transmission)</strong> adalah serangkaian intervensi untuk mencegah penularan HIV dari ibu ke bayi.</p>
-            <br>
-            <p><strong>Komponen PMTCT:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Pemberian ARV segera setelah diagnosis (Option B+)</li>
-              <li>ARV profilaksis untuk bayi baru lahir (NVP/AZT)</li>
-              <li>Persalinan yang aman (caesar jika viral load tinggi)</li>
-              <li>Pemberian susu formula jika memungkinkan</li>
-              <li>Pemantauan bayi dengan PCR DNA HIV pada usia 4–6 minggu</li>
-            </ul>
-            <br>
-            <p>Regimen ARV lini pertama yang direkomendasikan: <strong>TDF + 3TC + EFV</strong> (Tenofovir + Lamivudine + Efavirenz).</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🍼</span>
-        Menyusui pada Ibu dengan HIV
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p>Keputusan menyusui pada ibu HIV memerlukan pertimbangan yang matang berdasarkan kondisi dan lingkungan ibu.</p>
-            <br>
-            <p><strong>Rekomendasi WHO:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Di negara berkembang: menyusui tetap direkomendasikan jika ibu patuh ARV dan viral load tidak terdeteksi</li>
-              <li>Hindari menyusui jika tersedia susu formula yang aman dan terjangkau</li>
-              <li>Jangan campurkan ASI dan susu formula (mixed feeding)</li>
-              <li>Lanjutkan terapi ARV selama masa menyusui</li>
-            </ul>
-            <br>
-            <p>📌 Risiko penularan melalui ASI dapat dikurangi hingga &lt;1% jika ibu menjalani terapi ARV dengan kepatuhan tinggi.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Video edukasi section -->
-    <div style="margin-top:24px">
-      <div class="info-box" style="background:linear-gradient(135deg,#e53935,#b71c1c)">
-        <h3>🎬 Video Edukasi HIV pada Ibu Hamil</h3>
-        <p>Tonton video edukasi untuk memahami lebih lanjut tentang pencegahan penularan HIV dari ibu ke bayi.</p>
-      </div>
-      <div class="video-wrapper">
-        <div class="video-placeholder">
-          <span>▶️</span>
-          <div class="video-placeholder-text">Video Edukasi PMTCT<br>(Pencegahan Penularan HIV dari Ibu ke Bayi)</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="clearfix" style="margin-top:16px">
+     <div class="clearfix" style="margin-top:16px">
       <button class="btn-back" onclick="showPage('home')">⬅ KEMBALI</button>
     </div>
   </div>
@@ -1107,24 +1014,12 @@
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p><strong>ARV (Antiretroviral)</strong> adalah obat yang digunakan untuk menghambat perkembangbiakan virus HIV di dalam tubuh. ARV tidak menyembuhkan HIV, tetapi dapat menekan jumlah virus hingga tidak terdeteksi.</p>
-            <br>
-            <p><strong>Manfaat terapi ARV:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Menekan viral load hingga tidak terdeteksi</li>
-              <li>Meningkatkan jumlah CD4</li>
-              <li>Mencegah perkembangan ke fase AIDS</li>
-              <li>Mencegah penularan ke orang lain (U=U: Undetectable = Untransmittable)</li>
-              <li>Meningkatkan kualitas dan harapan hidup</li>
-            </ul>
-          </div>
-          <div class="acc-content-imgs">
-            <div class="acc-img-placeholder">💊</div>
+            <p><strong>Terapi Antiretroviral (ARV)</strong> adalah pengobatan yang digunakan untuk mengendalikan infeksi HIV dengan cara menghambat perkembangbiakan virus di dalam tubuh. Terapi ini tidak menyembuhkan HIV, tetapi dapat menurunkan jumlah virus (viral load), menjaga sistem kekebalan tubuh tetap kuat, serta mencegah terjadinya komplikasi dan penularan kepada orang lain.</p>
           </div>
         </div>
       </div>
     </div>
-
+<!-- ================ Golongan dan jenis obat ARV================ -->
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">🏥</span>
@@ -1137,96 +1032,94 @@
             <p><strong>Golongan ARV yang digunakan di Indonesia:</strong></p>
             <br>
             <div style="margin-bottom:12px">
-              <strong>1. NRTI (Nucleoside Reverse Transcriptase Inhibitor)</strong>
+              <strong>1. Tenovir</strong>
               <ul style="padding-left:18px;line-height:1.9;margin-top:4px">
-                <li>Tenofovir (TDF) — lini pertama</li>
-                <li>Lamivudine (3TC)</li>
-                <li>Zidovudine (AZT/ZDV)</li>
-                <li>Emtricitabine (FTC)</li>
+                <p>Membantu menghentikan perkembangan virus HIV di dalam tubuh Obat ini bekerja dengan menghambat virus agar tidak bisa berkembang biak, Tenofovir juga membantu menjaga daya tahan tubuh tetap kuat.</p>
               </ul>
             </div>
             <div style="margin-bottom:12px">
-              <strong>2. NNRTI (Non-Nucleoside Reverse Transcriptase Inhibitor)</strong>
+              <strong>2. Lamivudine</strong>
               <ul style="padding-left:18px;line-height:1.9;margin-top:4px">
-                <li>Efavirenz (EFV) — lini pertama</li>
-                <li>Nevirapine (NVP)</li>
-                <li>Rilpivirine (RPV)</li>
+                <p>Menghambat pertumbuhan virus HIV sehingga jumlah virus dalam darah menurun. Obat ini membantu kerja obat lain agar hasilnya lebih maksimal.</p>
               </ul>
             </div>
             <div style="margin-bottom:12px">
-              <strong>3. PI (Protease Inhibitor) — lini kedua</strong>
+              <strong>3. Dolutegravir</strong>
               <ul style="padding-left:18px;line-height:1.9;margin-top:4px">
-                <li>Lopinavir/ritonavir (LPV/r)</li>
-                <li>Atazanavir/ritonavir (ATV/r)</li>
+                <p>Mencegah virus HIV masuk dan menyatu dengan sel tubuh manusia, Dengan begitu, virus tidak bisa berkembang dan menyebar lebih banyak.</p>
               </ul>
             </div>
             <div>
-              <strong>4. INSTI (Integrase Strand Transfer Inhibitor)</strong>
+              <strong>4. Zidovudine</strong>
               <ul style="padding-left:18px;line-height:1.9;margin-top:4px">
-                <li>Dolutegravir (DTG) — pilihan terkini</li>
-                <li>Raltegravir (RAL)</li>
+                <p>Mengurangi jumlah virus HIV dalam darah, Obat ini juga sering digunakan untuk membantu mencegah penularan HIV dari ibu ke bayi.</p>
+              </ul>
+            </div>
+            <div>
+              <strong>5. Nevirapine</strong>
+              <ul style="padding-left:18px;line-height:1.9;margin-top:4px">
+                <p>Menghambat enzim yang dibutuhkan virus untuk berkembang. Dengan begitu, pertumbuhan virus menjadi lebih lambat.</p>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+<!-- ================ CARA MINUM ARV ================ -->
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">📋</span>
-        Regimen ARV Lini Pertama (Indonesia)
+       Cara dan Waktu Minum ARV
         <span class="acc-arrow">▼</span>
       </button>
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Panduan ARV lini pertama yang direkomendasikan Kemenkes RI:</p>
+            <p> <strong>Cara Penggunaan Obat</strong></p>
+           <ul style="padding-left:18px;line-height:2;margin-top:6px">
+              <li>Diminum setiap hari</li>
+              <li>Diminum pada jam yang sama setiap hari (pagi,siang, sore sesuai anjuran dokter)</li>
+              <li>Boleh diminum setelah makan jika terasa mual </li>
+              <li>Jangan pernah berhenti tanpa izin dokter</li>
+            </ul>
             <br>
-            <div class="info-box" style="background:rgba(255,255,255,0.1);padding:14px;border-radius:10px;margin-bottom:10px">
-              <strong>Dewasa & Remaja:</strong><br>
-              TDF + 3TC + DTG (preferred)<br>
-              TDF + 3TC + EFV 400mg (alternatif)
-            </div>
-            <div class="info-box" style="background:rgba(255,255,255,0.1);padding:14px;border-radius:10px;margin-bottom:10px">
-              <strong>Ibu Hamil:</strong><br>
-              TDF + 3TC + DTG (preferred)<br>
-              TDF + 3TC + EFV 600mg (alternatif)
-            </div>
-            <div class="info-box" style="background:rgba(255,255,255,0.1);padding:14px;border-radius:10px">
-              <strong>Anak (berbasis berat badan):</strong><br>
-              ABC + 3TC + LPV/r (< 3 tahun)<br>
-              ABC/TDF + 3TC + EFV (≥ 3 tahun)
-            </div>
-            <br>
-            <p>⚠️ <strong>Kepatuhan minum ARV sangat penting!</strong> Melewatkan dosis dapat menyebabkan resistensi obat.</p>
+           <p> <strong>WAKTU TERBAIK UNTUK MENGKONSUMSI OBAT</strong></p>
+           <ul style="padding-left:18px;line-height:2;margin-top:6px">
+              <li>Jangan lupa minum obat</li>
+              <li>Jangan menghentikan obat sendiri walaupun merasa sehat</li>
+              <li>Berkonsultasi jika merasa mengalami mual yang hebat terus menerus, ruam atau gatal berat, pusing berat dan terasa sangat lemas</li>
+              <li>Hindari minum obat bersamaan dengan obat lain tanpa konsultasi ke dokter</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-
+<!-- ================ KEPATUHAN DAN DAMPAK ================ -->
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)">
         <span class="acc-icon">📌</span>
-        Kepatuhan Pengobatan (Adherence)
+        Kepatuhan dan Dampak
         <span class="acc-arrow">▼</span>
       </button>
       <div class="acc-body">
         <div class="acc-content">
           <div class="acc-content-text">
-            <p>Kepatuhan ≥ 95% diperlukan untuk menjaga keberhasilan terapi ARV. Artinya dari 30 dosis sebulan, tidak boleh lebih dari 1–2 dosis terlewat.</p>
-            <br>
-            <p><strong>Tips meningkatkan kepatuhan:</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>⏰ Minum obat pada waktu yang sama setiap hari</li>
-              <li>📱 Gunakan alarm atau aplikasi pengingat</li>
-              <li>💊 Gunakan pil kotak untuk memantau dosis</li>
-              <li>👥 Gabung kelompok dukungan sebaya (KDS)</li>
-              <li>🏥 Rutin kontrol ke klinik VCT/CST</li>
-              <li>💬 Diskusikan efek samping dengan petugas kesehatan</li>
-            </ul>
-            <br>
-            <p>💡 Jika viral load tidak terdeteksi (&lt;200 kopi/mL) selama ≥6 bulan, seseorang dengan HIV tidak dapat menularkan virus melalui hubungan seksual. Ini disebut prinsip <strong>U=U</strong>.</p>
+            <p><strong>Ketaatan dalam mengonsumsi obat antiretroviral (ARV) berperan penting</strong> dalam menurunkan viral load hingga mencapai tingkat tidak terdeteksi, mencegah terjadinya resistensi, mempertahankan jumlah sel CD4, serta mengurangi risiko penularan HIV dari ibu kepada bayi. Ketidakpatuhan dapat berdampak pada kegagalan pengobatan dan meningkatkan kemungkinan komplikasi. Efek samping ARV yang sering muncul antara lain mual, muntah, diare, anemia, ruam kulit, gangguan fungsi hati, serta pusing atau gangguan tidur, namun umumnya dapat dikendalikan melalui pemantauan berkala dan penyesuaian terapi tanpa menghentikan obat sendiri.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="acc-item">
+      <button class="acc-header" onclick="toggleAcc(this)">
+        <span class="acc-icon">💢</span>
+        Efek Samping
+        <span class="acc-arrow">▼</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-content">
+          <div class="acc-content-text">
+            <p><strong>Konsumsi ARV pada ibu hamil dengan HIV berperan penting</strong> dalam menurunkan jumlah virus hingga tidak terdeteksi sehingga risiko penularan ke bayi dapat ditekan secara signifikan. ARV juga membantu menjaga jumlah sel CD4 dan daya tahan tubuh ibu agar tetap stabil. Meskipun dapat menimbulkan efek samping seperti mual, anemia, atau gangguan fungsi hati, manfaat terapi ARV tetap jauh lebih besar, sehingga obat harus diminum secara teratur sesuai anjuran tenaga kesehatan</p>
           </div>
         </div>
       </div>
@@ -1240,118 +1133,85 @@
 
 <!-- ================ PENCEGAHAN PAGE ================ -->
 <div class="page" id="page-pencegahan">
-  <div class="inner-page">
+  <div class="inner-page" style="max-width:680px">
     <div class="page-title reveal">Pencegahan HIV</div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🛡️</span>
-        Pencegahan Seksual (ABC)
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p>Pendekatan <strong>ABC</strong> merupakan strategi pencegahan HIV yang komprehensif:</p>
-            <br>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
-                <div style="font-size:28px;font-weight:900;margin-bottom:4px">A</div>
-                <div style="font-weight:800;font-size:13px">Abstinence</div>
-                <div style="font-size:12px;opacity:0.85;margin-top:4px">Tidak melakukan hubungan seksual (bagi yang belum menikah)</div>
-              </div>
-              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
-                <div style="font-size:28px;font-weight:900;margin-bottom:4px">B</div>
-                <div style="font-weight:800;font-size:13px">Be Faithful</div>
-                <div style="font-size:12px;opacity:0.85;margin-top:4px">Setia pada satu pasangan yang tidak terinfeksi</div>
-              </div>
-              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
-                <div style="font-size:28px;font-weight:900;margin-bottom:4px">C</div>
-                <div style="font-weight:800;font-size:13px">Condom</div>
-                <div style="font-size:12px;opacity:0.85;margin-top:4px">Penggunaan kondom secara konsisten dan benar</div>
-              </div>
-            </div>
-            <p>Penggunaan kondom lateks yang benar dan konsisten dapat mengurangi risiko penularan HIV secara seksual hingga <strong>85–95%</strong>.</p>
+    <!-- ABCDE accordion items -->
+    <div class="abcde-list">
+
+      <!-- A -->
+      <div class="abcde-item reveal delay-1">
+        <div class="abcde-row" onclick="toggleAbcde(this)">
+          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">A</div>
+          <div class="abcde-right">
+            <button class="abcde-btn">A - Abstinence &amp; Aman</button>
+            <div class="abcde-bar"></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">💉</span>
-        Pencegahan melalui Jarum Suntik
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <ul style="padding-left:18px;line-height:2.2">
-              <li>✅ Gunakan jarum suntik sekali pakai (disposable)</li>
-              <li>✅ Jangan berbagi jarum suntik, spuit, atau peralatan suntik</li>
-              <li>✅ Ikuti program jarum suntik bersih (harm reduction)</li>
-              <li>✅ Akses layanan substitusi opioid (metadon)</li>
-              <li>✅ Pastikan tato dan tindik menggunakan alat steril</li>
-              <li>✅ Tenaga kesehatan wajib menggunakan APD dan jarum sekali pakai</li>
-            </ul>
-          </div>
+        <div class="abcde-desc">
+          Menghindari perilaku seksual berisiko dan melakukan hubungan seksual secara aman dengan menggunakan kondom secara konsisten serta tidak berganti-ganti pasangan.
         </div>
       </div>
-    </div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🧬</span>
-        PrEP dan PEP
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <div style="margin-bottom:16px">
-              <strong>PrEP (Pre-Exposure Prophylaxis)</strong>
-              <p style="margin-top:6px">Penggunaan ARV oleh orang yang belum terinfeksi HIV namun berisiko tinggi, untuk mencegah infeksi. Efektivitas hingga <strong>99%</strong> jika digunakan dengan benar.</p>
-              <p style="margin-top:6px">Regimen: TDF/FTC (Truvada) atau TDF/3TC diminum setiap hari.</p>
-            </div>
-            <hr style="border-color:rgba(255,255,255,0.2);margin:14px 0">
-            <div>
-              <strong>PEP (Post-Exposure Prophylaxis)</strong>
-              <p style="margin-top:6px">Penggunaan ARV setelah kemungkinan terpapar HIV, dimulai <strong>dalam 72 jam</strong> setelah paparan dan dilanjutkan selama 28 hari.</p>
-              <p style="margin-top:6px">PEP bukan pengganti pencegahan rutin — hanya untuk keadaan darurat.</p>
-            </div>
+      <!-- B -->
+      <div class="abcde-item reveal delay-2">
+        <div class="abcde-row" onclick="toggleAbcde(this)">
+          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">B</div>
+          <div class="abcde-right">
+            <button class="abcde-btn">B – Blood Safety</button>
+            <div class="abcde-bar"></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🩺</span>
-        Tes HIV Rutin (VCT)
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p><strong>VCT (Voluntary Counseling and Testing)</strong> adalah layanan tes HIV secara sukarela yang dilengkapi konseling sebelum dan sesudah tes.</p>
-            <br>
-            <p><strong>Siapa yang dianjurkan tes HIV?</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Semua ibu hamil (skrining ANC)</li>
-              <li>Orang dengan risiko tinggi perilaku seksual</li>
-              <li>Pengguna napza suntik</li>
-              <li>Pasangan dari ODHA</li>
-              <li>Penderita TB, IMS, atau hepatitis</li>
-              <li>Bayi yang lahir dari ibu HIV-positif</li>
-            </ul>
-            <br>
-            <p>📌 Tes HIV bersifat <strong>rahasia dan gratis</strong> di semua Puskesmas dan Rumah Sakit pemerintah di Indonesia. Ketahui status HIV Anda!</p>
-          </div>
+        <div class="abcde-desc">
+          Tidak berbagi jarum suntik dan memastikan penggunaan alat medis, tato, atau tindik dalam kondisi steril untuk mencegah penularan melalui darah.
         </div>
       </div>
+
+      <!-- C -->
+      <div class="abcde-item reveal delay-3">
+        <div class="abcde-row" onclick="toggleAbcde(this)">
+          <div class="abcde-letter" style="color:#e67e22;-webkit-text-stroke:2px #a04000;">C</div>
+          <div class="abcde-right">
+            <button class="abcde-btn">C – Check Up (Tes HIV Rutin)</button>
+            <div class="abcde-bar"></div>
+          </div>
+        </div>
+        <div class="abcde-desc">
+          Melakukan skrining atau tes HIV secara berkala, terutama bagi individu dengan faktor risiko, agar infeksi dapat terdeteksi dan ditangani lebih dini.
+        </div>
+      </div>
+
+      <!-- D -->
+      <div class="abcde-item reveal delay-4">
+        <div class="abcde-row" onclick="toggleAbcde(this)">
+          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">D</div>
+          <div class="abcde-right">
+            <button class="abcde-btn">D – Drugs (Terapi ARV)</button>
+            <div class="abcde-bar"></div>
+          </div>
+        </div>
+        <div class="abcde-desc">
+          Bagi orang dengan HIV, rutin mengonsumsi terapi antiretroviral (ARV) untuk menurunkan jumlah virus sehingga risiko penularan semakin kecil.
+        </div>
+      </div>
+
+      <!-- E -->
+      <div class="abcde-item reveal delay-5">
+        <div class="abcde-row" onclick="toggleAbcde(this)">
+          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">E</div>
+          <div class="abcde-right">
+            <button class="abcde-btn">E – Education &amp; Eliminate Stigma</button>
+            <div class="abcde-bar"></div>
+          </div>
+        </div>
+        <div class="abcde-desc">
+          Meningkatkan edukasi tentang HIV serta mengurangi stigma agar masyarakat memahami cara penularan yang benar dan mendukung akses layanan kesehatan.
+        </div>
+      </div>
+
     </div>
 
-    <div class="clearfix">
+    <div class="clearfix" style="margin-top:24px">
       <button class="btn-back" onclick="showPage('home')">⬅ KEMBALI</button>
     </div>
   </div>
@@ -1717,6 +1577,15 @@
       const arrow = labelEl.querySelector('span');
       if (arrow) arrow.style.transform = 'rotate(180deg)';
     }
+  }
+
+  // ABCDE Pencegahan toggle
+  function toggleAbcde(rowEl) {
+    const item = rowEl.closest('.abcde-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.abcde-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   }
 
   // Old toggleAcc for other pages (gejala, pengobatan, pencegahan, ibu hamil)
