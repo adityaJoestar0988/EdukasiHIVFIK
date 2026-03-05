@@ -255,6 +255,36 @@
     font-size: 28px; color: rgba(255,255,255,0.5);
   }
 
+  /* ============ VIDEO EDU BUTTON ============ */
+  .video-edu-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+    color: white; text-decoration: none;
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; font-weight: 900;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 24px rgba(46,125,50,0.40);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid rgba(255,255,255,0.25);
+    text-transform: uppercase;
+  }
+  .video-edu-btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(46,125,50,0.50);
+  }
+  .video-edu-icon {
+    width: 40px; height: 40px;
+    background: white; color: #2e7d32;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 900;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding-left: 3px;
+  }
+
   /* Back button */
   .btn-back {
     display: inline-flex; align-items: center; gap: 8px;
@@ -271,63 +301,6 @@
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(229,57,53,0.38);
   }
-
-  /* ============ ABCDE PENCEGAHAN ============ */
-  .abcde-list { display: flex; flex-direction: column; gap: 18px; }
-
-  .abcde-item { }
-
-  .abcde-row {
-    display: flex; align-items: center; gap: 16px;
-    cursor: pointer; user-select: none;
-  }
-
-  .abcde-letter {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 68px; font-weight: 900;
-    line-height: 1; flex-shrink: 0; width: 72px; text-align: center;
-    text-shadow:
-      3px 3px 0 #fff,
-      -1px -1px 0 #fff,
-      1px -1px 0 #fff,
-      -1px 1px 0 #fff,
-      4px 6px 8px rgba(0,0,0,0.25);
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-  }
-
-  .abcde-right { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-
-  .abcde-btn {
-    background: var(--blue-mid); color: white;
-    border: none; border-radius: 8px;
-    padding: 10px 18px; font-size: 15px; font-weight: 800;
-    font-family: 'Nunito', sans-serif;
-    text-align: left; cursor: pointer;
-    transition: background 0.2s;
-    width: fit-content;
-  }
-  .abcde-row:hover .abcde-btn,
-  .abcde-item.open .abcde-btn { background: var(--blue); }
-
-  .abcde-bar {
-    height: 10px; background: var(--blue-mid);
-    border-radius: 6px; width: 100%;
-    transition: background 0.2s;
-  }
-  .abcde-row:hover .abcde-bar,
-  .abcde-item.open .abcde-bar { background: var(--blue); }
-
-  .abcde-desc {
-    display: none;
-    background: var(--blue-mid); color: white;
-    border-radius: 10px; padding: 14px 18px;
-    font-size: 14px; line-height: 1.75; font-weight: 600;
-    margin-left: 88px;
-    margin-top: 6px;
-  }
-  .abcde-item.open .abcde-desc { display: block; }
-
-  .reveal.delay-5 { transition-delay: 0.4s; }
 
   /* ============ ARTIKEL PAGE ============ */
   .artikel-grid {
@@ -652,7 +625,13 @@
       <p class="hero-desc">
         Website edukasi HIV/AIDS ini menyediakan layanan informasi digital yang lengkap, akurat, dan mudah dipahami mengenai HIV, mulai dari pengertian, penularan, gejala, pencegahan, hingga pengobatan ARV dan pencegahan ibu-ke-bayi. Dilengkapi dengan video edukasi inspiratif sebagai intervensi utama.
       </p>
-      <button class="hero-cta" onclick="showMenuSection()">KENALI HIV</button>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <button class="hero-cta" onclick="showMenuSection()">KENALI HIV</button>
+        <a href="https://youtu.be/QEv-DWT2_fU?si=ccV4FXZX_qn6AfQ3" target="_blank" rel="noopener" class="video-edu-btn">
+          <span class="video-edu-icon">▶</span>
+          Tonton Video Edukasi
+        </a>
+      </div>
     </div>
 
     <div class="hero-image">
@@ -1133,85 +1112,118 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
 
 <!-- ================ PENCEGAHAN PAGE ================ -->
 <div class="page" id="page-pencegahan">
-  <div class="inner-page" style="max-width:680px">
+  <div class="inner-page">
     <div class="page-title reveal">Pencegahan HIV</div>
 
-    <!-- ABCDE accordion items -->
-    <div class="abcde-list">
-
-      <!-- A -->
-      <div class="abcde-item reveal delay-1">
-        <div class="abcde-row" onclick="toggleAbcde(this)">
-          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">A</div>
-          <div class="abcde-right">
-            <button class="abcde-btn">A - Abstinence &amp; Aman</button>
-            <div class="abcde-bar"></div>
+    <div class="acc-item">
+      <button class="acc-header" onclick="toggleAcc(this)">
+        <span class="acc-icon">🛡️</span>
+        Pencegahan Seksual (ABC)
+        <span class="acc-arrow">▼</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-content">
+          <div class="acc-content-text">
+            <p>Pendekatan <strong>ABC</strong> merupakan strategi pencegahan HIV yang komprehensif:</p>
+            <br>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
+                <div style="font-size:28px;font-weight:900;margin-bottom:4px">A</div>
+                <div style="font-weight:800;font-size:13px">Abstinence</div>
+                <div style="font-size:12px;opacity:0.85;margin-top:4px">Tidak melakukan hubungan seksual (bagi yang belum menikah)</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
+                <div style="font-size:28px;font-weight:900;margin-bottom:4px">B</div>
+                <div style="font-weight:800;font-size:13px">Be Faithful</div>
+                <div style="font-size:12px;opacity:0.85;margin-top:4px">Setia pada satu pasangan yang tidak terinfeksi</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
+                <div style="font-size:28px;font-weight:900;margin-bottom:4px">C</div>
+                <div style="font-weight:800;font-size:13px">Condom</div>
+                <div style="font-size:12px;opacity:0.85;margin-top:4px">Penggunaan kondom secara konsisten dan benar</div>
+              </div>
+            </div>
+            <p>Penggunaan kondom lateks yang benar dan konsisten dapat mengurangi risiko penularan HIV secara seksual hingga <strong>85–95%</strong>.</p>
           </div>
         </div>
-        <div class="abcde-desc">
-          Menghindari perilaku seksual berisiko dan melakukan hubungan seksual secara aman dengan menggunakan kondom secara konsisten serta tidak berganti-ganti pasangan.
-        </div>
       </div>
-
-      <!-- B -->
-      <div class="abcde-item reveal delay-2">
-        <div class="abcde-row" onclick="toggleAbcde(this)">
-          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">B</div>
-          <div class="abcde-right">
-            <button class="abcde-btn">B – Blood Safety</button>
-            <div class="abcde-bar"></div>
-          </div>
-        </div>
-        <div class="abcde-desc">
-          Tidak berbagi jarum suntik dan memastikan penggunaan alat medis, tato, atau tindik dalam kondisi steril untuk mencegah penularan melalui darah.
-        </div>
-      </div>
-
-      <!-- C -->
-      <div class="abcde-item reveal delay-3">
-        <div class="abcde-row" onclick="toggleAbcde(this)">
-          <div class="abcde-letter" style="color:#e67e22;-webkit-text-stroke:2px #a04000;">C</div>
-          <div class="abcde-right">
-            <button class="abcde-btn">C – Check Up (Tes HIV Rutin)</button>
-            <div class="abcde-bar"></div>
-          </div>
-        </div>
-        <div class="abcde-desc">
-          Melakukan skrining atau tes HIV secara berkala, terutama bagi individu dengan faktor risiko, agar infeksi dapat terdeteksi dan ditangani lebih dini.
-        </div>
-      </div>
-
-      <!-- D -->
-      <div class="abcde-item reveal delay-4">
-        <div class="abcde-row" onclick="toggleAbcde(this)">
-          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">D</div>
-          <div class="abcde-right">
-            <button class="abcde-btn">D – Drugs (Terapi ARV)</button>
-            <div class="abcde-bar"></div>
-          </div>
-        </div>
-        <div class="abcde-desc">
-          Bagi orang dengan HIV, rutin mengonsumsi terapi antiretroviral (ARV) untuk menurunkan jumlah virus sehingga risiko penularan semakin kecil.
-        </div>
-      </div>
-
-      <!-- E -->
-      <div class="abcde-item reveal delay-5">
-        <div class="abcde-row" onclick="toggleAbcde(this)">
-          <div class="abcde-letter" style="color:#c0392b;-webkit-text-stroke:2px #7b1a1a;">E</div>
-          <div class="abcde-right">
-            <button class="abcde-btn">E – Education &amp; Eliminate Stigma</button>
-            <div class="abcde-bar"></div>
-          </div>
-        </div>
-        <div class="abcde-desc">
-          Meningkatkan edukasi tentang HIV serta mengurangi stigma agar masyarakat memahami cara penularan yang benar dan mendukung akses layanan kesehatan.
-        </div>
-      </div>
-
     </div>
 
-    <div class="clearfix" style="margin-top:24px">
+    <div class="acc-item">
+      <button class="acc-header" onclick="toggleAcc(this)">
+        <span class="acc-icon">💉</span>
+        Pencegahan melalui Jarum Suntik
+        <span class="acc-arrow">▼</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-content">
+          <div class="acc-content-text">
+            <ul style="padding-left:18px;line-height:2.2">
+              <li>✅ Gunakan jarum suntik sekali pakai (disposable)</li>
+              <li>✅ Jangan berbagi jarum suntik, spuit, atau peralatan suntik</li>
+              <li>✅ Ikuti program jarum suntik bersih (harm reduction)</li>
+              <li>✅ Akses layanan substitusi opioid (metadon)</li>
+              <li>✅ Pastikan tato dan tindik menggunakan alat steril</li>
+              <li>✅ Tenaga kesehatan wajib menggunakan APD dan jarum sekali pakai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-header" onclick="toggleAcc(this)">
+        <span class="acc-icon">🧬</span>
+        PrEP dan PEP
+        <span class="acc-arrow">▼</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-content">
+          <div class="acc-content-text">
+            <div style="margin-bottom:16px">
+              <strong>PrEP (Pre-Exposure Prophylaxis)</strong>
+              <p style="margin-top:6px">Penggunaan ARV oleh orang yang belum terinfeksi HIV namun berisiko tinggi, untuk mencegah infeksi. Efektivitas hingga <strong>99%</strong> jika digunakan dengan benar.</p>
+              <p style="margin-top:6px">Regimen: TDF/FTC (Truvada) atau TDF/3TC diminum setiap hari.</p>
+            </div>
+            <hr style="border-color:rgba(255,255,255,0.2);margin:14px 0">
+            <div>
+              <strong>PEP (Post-Exposure Prophylaxis)</strong>
+              <p style="margin-top:6px">Penggunaan ARV setelah kemungkinan terpapar HIV, dimulai <strong>dalam 72 jam</strong> setelah paparan dan dilanjutkan selama 28 hari.</p>
+              <p style="margin-top:6px">PEP bukan pengganti pencegahan rutin — hanya untuk keadaan darurat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-header" onclick="toggleAcc(this)">
+        <span class="acc-icon">🩺</span>
+        Tes HIV Rutin (VCT)
+        <span class="acc-arrow">▼</span>
+      </button>
+      <div class="acc-body">
+        <div class="acc-content">
+          <div class="acc-content-text">
+            <p><strong>VCT (Voluntary Counseling and Testing)</strong> adalah layanan tes HIV secara sukarela yang dilengkapi konseling sebelum dan sesudah tes.</p>
+            <br>
+            <p><strong>Siapa yang dianjurkan tes HIV?</strong></p>
+            <ul style="padding-left:18px;line-height:2;margin-top:6px">
+              <li>Semua ibu hamil (skrining ANC)</li>
+              <li>Orang dengan risiko tinggi perilaku seksual</li>
+              <li>Pengguna napza suntik</li>
+              <li>Pasangan dari ODHA</li>
+              <li>Penderita TB, IMS, atau hepatitis</li>
+              <li>Bayi yang lahir dari ibu HIV-positif</li>
+            </ul>
+            <br>
+            <p>📌 Tes HIV bersifat <strong>rahasia dan gratis</strong> di semua Puskesmas dan Rumah Sakit pemerintah di Indonesia. Ketahui status HIV Anda!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix">
       <button class="btn-back" onclick="showPage('home')">⬅ KEMBALI</button>
     </div>
   </div>
@@ -1475,26 +1487,25 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
           <div class="kontak-icon">📞</div>
           <div>
             <div class="kontak-label">Telepon</div>
-            To be announce...
+            (0298) 321212
           </div>
         </div>
         <div class="kontak-row">
           <div class="kontak-icon">✉️</div>
           <div>
             <div class="kontak-label">Email</div>
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd9b9496bd88968e8ad3989988">To be announce...</a>
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd9b9496bd88968e8ad3989988">[email&#160;protected]</a>
           </div>
         </div>
         <div class="kontak-row">
           <div class="kontak-icon">🌐</div>
           <div>
             <div class="kontak-label">Website</div>
-            To be announce...
+            fik.uksw.edu
           </div>
         </div>
       </div>
-      
-<!-- layanan to be annouce juga......
+
       <div style="background:#f0f6ff;border-radius:14px;padding:18px;margin-top:8px">
         <div style="font-weight:800;color:#1a3a8f;margin-bottom:12px;font-size:15px">
           🆘 Layanan VCT Terdekat
@@ -1514,7 +1525,6 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
     </div>
   </div>
 </div>
--->
 
 <script>
   function showPage(pageId) {
@@ -1579,15 +1589,6 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
       const arrow = labelEl.querySelector('span');
       if (arrow) arrow.style.transform = 'rotate(180deg)';
     }
-  }
-
-  // ABCDE Pencegahan toggle
-  function toggleAbcde(rowEl) {
-    const item = rowEl.closest('.abcde-item');
-    const isOpen = item.classList.contains('open');
-    // Close all
-    document.querySelectorAll('.abcde-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
   }
 
   // Old toggleAcc for other pages (gejala, pengobatan, pencegahan, ibu hamil)
