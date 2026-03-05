@@ -307,6 +307,21 @@
   .artikel-card-desc {
     font-size: 13px; color: #666; line-height: 1.6;
   }
+  .artikel-card-source {
+    font-size: 11px; color: var(--blue-light); font-weight: 700;
+    margin-top: 10px; opacity: 0.85;
+  }
+  a.artikel-card {
+    text-decoration: none; color: inherit; display: block;
+  }
+  a.artikel-card:hover .artikel-card-title { color: var(--red); }
+  .artikel-section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; font-weight: 800; color: var(--blue);
+    border-left: 5px solid var(--red);
+    padding: 6px 16px; margin-bottom: 18px;
+    background: rgba(179,200,232,0.25); border-radius: 0 10px 10px 0;
+  }
 
   /* ============ KONTAK PAGE ============ */
   .kontak-box {
@@ -1345,57 +1360,233 @@
 <!-- ================ ARTIKEL PAGE ================ -->
 <div class="page" id="page-artikel">
   <div class="inner-page" style="max-width:960px">
-    <div class="page-title reveal">Artikel Kesehatan</div>
+    <div class="page-title reveal">Artikel &amp; Referensi</div>
+    <p style="text-align:center;color:#555;font-size:15px;margin-bottom:28px;font-weight:600" class="reveal">Kumpulan berita, jurnal, dan sumber terpercaya seputar HIV/AIDS di Indonesia. Klik untuk membaca selengkapnya.</p>
+
+    <!-- Kategori: Berita & Data Nasional -->
+    <div class="artikel-section-label reveal">📰 Berita &amp; Data Nasional</div>
     <div class="artikel-grid">
-      <div class="artikel-card reveal delay-1">
+
+      <a class="artikel-card reveal delay-1" href="https://en.antaranews.com/news/342746/indonesia-records-17136-tb-hiv-cases-in-2024-up-from-2022" target="_blank" rel="noopener">
         <div class="artikel-card-img">🦠</div>
         <div class="artikel-card-body">
-          <div class="artikel-card-tag">Edukasi</div>
-          <div class="artikel-card-title">Memahami Perbedaan HIV dan AIDS: Apa yang Perlu Anda Ketahui</div>
-          <div class="artikel-card-desc">Banyak orang masih keliru tentang perbedaan HIV dan AIDS. Artikel ini menjelaskan secara sederhana dan mudah dipahami.</div>
+          <div class="artikel-card-tag">Data Nasional</div>
+          <div class="artikel-card-title">Indonesia Records 17,136 TB-HIV Cases in 2024, Up from 2022</div>
+          <div class="artikel-card-desc">Antara News melaporkan peningkatan kasus ko-infeksi TB-HIV di Indonesia dari tahun 2022 hingga 2024.</div>
+          <div class="artikel-card-source">🔗 antaranews.com</div>
         </div>
-      </div>
-      <div class="artikel-card reveal delay-2">
-        <div class="artikel-card-img">💊</div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://www.antaranews.com/berita/4913705/per-maret-2025-kemenkes-temukan-358683-orang-dengan-hiv-di-ri" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📊</div>
         <div class="artikel-card-body">
-          <div class="artikel-card-tag">Pengobatan</div>
-          <div class="artikel-card-title">ARV: Cara Kerja dan Pentingnya Kepatuhan Minum Obat</div>
-          <div class="artikel-card-desc">Terapi ARV telah mengubah HIV dari penyakit mematikan menjadi kondisi kronis yang dapat dikelola. Pelajari lebih lanjut.</div>
+          <div class="artikel-card-tag">Data Nasional</div>
+          <div class="artikel-card-title">Per Maret 2025: Kemenkes Temukan 358.683 Orang dengan HIV di RI</div>
+          <div class="artikel-card-desc">Kementerian Kesehatan merilis data terbaru jumlah ODHIV yang ditemukan di Indonesia hingga Maret 2025.</div>
+          <div class="artikel-card-source">🔗 antaranews.com</div>
         </div>
-      </div>
-      <div class="artikel-card reveal delay-3">
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://health.detik.com/berita-detikhealth/d-8034016/sebaran-kasus-hiv-di-indonesia-2025-ini-pentingnya-edukasi-dan-deteksi-dini" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🗺️</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Edukasi</div>
+          <div class="artikel-card-title">Sebaran Kasus HIV di Indonesia 2025: Pentingnya Edukasi dan Deteksi Dini</div>
+          <div class="artikel-card-desc">Detik Health mengulas peta sebaran kasus HIV di Indonesia 2025 dan urgensi edukasi serta deteksi dini.</div>
+          <div class="artikel-card-source">🔗 health.detik.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-1" href="https://linkpapua.id/papua-dan-papua-tengah-catat-positivity-rate-tertinggi-kasus-hiv-di-indonesia/" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📍</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Regional</div>
+          <div class="artikel-card-title">Papua dan Papua Tengah Catat Positivity Rate Tertinggi HIV di Indonesia</div>
+          <div class="artikel-card-desc">Provinsi Papua dan Papua Tengah mencatat tingkat positivitas HIV tertinggi secara nasional.</div>
+          <div class="artikel-card-source">🔗 linkpapua.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://www.liputan6.com/health/read/6056749/kemenkes-ungkap-ada-2700-kasus-hiv-pada-remaja-bagaimana-intervensinya" target="_blank" rel="noopener">
+        <div class="artikel-card-img">👦</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Remaja</div>
+          <div class="artikel-card-title">Kemenkes Ungkap Ada 2.700 Kasus HIV pada Remaja</div>
+          <div class="artikel-card-desc">Liputan6 mengangkat temuan Kemenkes soal ribuan kasus HIV pada remaja dan upaya intervensi yang dilakukan.</div>
+          <div class="artikel-card-source">🔗 liputan6.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://www.komnasham.go.id/index.php/news/2024/10/1/2567/kasus-anak-dengan-hiv-aids-tinggi-perlu-edukasi-berbasis-ham.html" target="_blank" rel="noopener">
+        <div class="artikel-card-img">👶</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Anak &amp; HAM</div>
+          <div class="artikel-card-title">Kasus Anak dengan HIV/AIDS Tinggi: Perlu Edukasi Berbasis HAM</div>
+          <div class="artikel-card-desc">Komnas HAM menyoroti tingginya kasus HIV pada anak dan perlunya pendekatan edukasi berbasis hak asasi manusia.</div>
+          <div class="artikel-card-source">🔗 komnasham.go.id</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Kategori: Berita Regional -->
+    <div class="artikel-section-label reveal" style="margin-top:32px">🏙️ Berita Regional</div>
+    <div class="artikel-grid">
+
+      <a class="artikel-card reveal delay-1" href="https://regional.kompas.com/read/2024/12/13/080618178/kasus-hiv-aids-di-sumbawa-meningkat-sejak-2022-kini-tercatat-179-kasus" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📈</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Sumbawa</div>
+          <div class="artikel-card-title">Kasus HIV/AIDS di Sumbawa Meningkat Sejak 2022, Kini 179 Kasus</div>
+          <div class="artikel-card-desc">Kompas Regional melaporkan tren peningkatan HIV/AIDS di Sumbawa sejak tahun 2022 hingga 179 kasus tercatat.</div>
+          <div class="artikel-card-source">🔗 kompas.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://dinkes.acehprov.go.id/detailpost/kasus-hiv-dan-sifilis-meningkat-didominasi-ibu-rumah-tangga" target="_blank" rel="noopener">
+        <div class="artikel-card-img">👩‍👧</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Aceh</div>
+          <div class="artikel-card-title">Kasus HIV dan Sifilis Meningkat, Didominasi Ibu Rumah Tangga</div>
+          <div class="artikel-card-desc">Dinkes Aceh melaporkan peningkatan kasus HIV dan sifilis yang mayoritas dialami oleh ibu rumah tangga.</div>
+          <div class="artikel-card-source">🔗 dinkes.acehprov.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://cimahikota.go.id/berita/detail/82231-dinas-kesehatan-kota-cimahi-temukan-88-kasus-hiv-aids-baru-tahun-ini" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🏥</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Cimahi</div>
+          <div class="artikel-card-title">Dinkes Cimahi Temukan 88 Kasus HIV/AIDS Baru Tahun Ini</div>
+          <div class="artikel-card-desc">Dinas Kesehatan Kota Cimahi mencatat 88 kasus HIV/AIDS baru dalam satu tahun berjalan.</div>
+          <div class="artikel-card-source">🔗 cimahikota.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-1" href="https://www.papua.go.id/view-detail-berita-4302/kasus-hivaids-papua-tembus-26-ribu-kasus.html" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🌏</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Papua</div>
+          <div class="artikel-card-title">Kasus HIV/AIDS Papua Tembus 26 Ribu Kasus</div>
+          <div class="artikel-card-desc">Pemerintah Provinsi Papua melaporkan jumlah kumulatif kasus HIV/AIDS yang telah melampaui angka 26.000.</div>
+          <div class="artikel-card-source">🔗 papua.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://rakyatbengkulu.disway.id/bengkulu-raya/read/711653/kasus-hivaids-di-kota-bengkulu-capai-1216-dinkes-ingatkan-warga-waspada-penularan" target="_blank" rel="noopener">
+        <div class="artikel-card-img">⚠️</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Bengkulu</div>
+          <div class="artikel-card-title">Kasus HIV/AIDS di Kota Bengkulu Capai 1.216</div>
+          <div class="artikel-card-desc">Dinkes Bengkulu mengingatkan warga agar waspada penularan HIV setelah kasus melampaui angka 1.216.</div>
+          <div class="artikel-card-source">🔗 rakyatbengkulu.disway.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://sumedangkab.go.id/berita/detail/temuan-kasus-hiv-ibu-hamil-capai-11-orang" target="_blank" rel="noopener">
         <div class="artikel-card-img">🤱</div>
         <div class="artikel-card-body">
-          <div class="artikel-card-tag">Ibu & Anak</div>
-          <div class="artikel-card-title">Ibu HIV Positif Bisa Melahirkan Bayi Sehat: Fakta PMTCT</div>
-          <div class="artikel-card-desc">Dengan penanganan yang tepat, ibu dengan HIV dapat melahirkan bayi yang bebas HIV. Kenali program PMTCT.</div>
+          <div class="artikel-card-tag">Ibu Hamil</div>
+          <div class="artikel-card-title">Temuan Kasus HIV pada Ibu Hamil Capai 11 Orang di Sumedang</div>
+          <div class="artikel-card-desc">Kabupaten Sumedang melaporkan 11 ibu hamil teridentifikasi HIV dalam program skrining ANC.</div>
+          <div class="artikel-card-source">🔗 sumedangkab.go.id</div>
         </div>
-      </div>
-      <div class="artikel-card reveal delay-2">
-        <div class="artikel-card-img">🛡️</div>
+      </a>
+
+      <a class="artikel-card reveal delay-1" href="https://beritajatim.com/lima-ibu-hamil-di-magetan-terinfeksi-hiv-total-kasus-tembus-108" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🏩</div>
         <div class="artikel-card-body">
-          <div class="artikel-card-tag">Pencegahan</div>
-          <div class="artikel-card-title">PrEP: Obat Pencegahan HIV Sebelum Terpapar</div>
-          <div class="artikel-card-desc">PrEP adalah terobosan dalam pencegahan HIV. Efektif hingga 99% jika digunakan dengan benar dan konsisten.</div>
+          <div class="artikel-card-tag">Jawa Timur</div>
+          <div class="artikel-card-title">Lima Ibu Hamil di Magetan Terinfeksi HIV, Total Kasus Tembus 108</div>
+          <div class="artikel-card-desc">Berita Jatim melaporkan lima ibu hamil di Magetan positif HIV, dengan total akumulasi kasus mencapai 108.</div>
+          <div class="artikel-card-source">🔗 beritajatim.com</div>
         </div>
-      </div>
-      <div class="artikel-card reveal delay-3">
-        <div class="artikel-card-img">❤️</div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://beritajatim.com/lima-ibu-hamil-di-magetan-terinfeksi-hiv-total-kasus-tembus-108" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🩺</div>
         <div class="artikel-card-body">
-          <div class="artikel-card-tag">Stigma</div>
-          <div class="artikel-card-title">Hentikan Stigma: ODHA Berhak Hidup Bermartabat</div>
-          <div class="artikel-card-desc">Stigma dan diskriminasi terhadap ODHA masih menjadi hambatan utama. Mari bersama-sama membangun masyarakat yang inklusif.</div>
+          <div class="artikel-card-tag">Jawa Timur</div>
+          <div class="artikel-card-title">Update: Kasus HIV Magetan Tembus 108 — Ibu Hamil Jadi Perhatian</div>
+          <div class="artikel-card-desc">Laporan lanjutan Berita Jatim soal kondisi terbaru kasus HIV di Magetan, Jawa Timur, termasuk upaya penanganan.</div>
+          <div class="artikel-card-source">🔗 beritajatim.com</div>
         </div>
-      </div>
-      <div class="artikel-card reveal delay-4">
-        <div class="artikel-card-img">🔬</div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://www.kebijakanaidsindonesia.net/en/article/news/1608-seorang-ibu-hamil-di-mataram-terjangkit-hiv-aids" target="_blank" rel="noopener">
+        <div class="artikel-card-img">💉</div>
         <div class="artikel-card-body">
-          <div class="artikel-card-tag">Riset</div>
-          <div class="artikel-card-title">U=U: Undetectable Equals Untransmittable — Fakta atau Mitos?</div>
-          <div class="artikel-card-desc">Bukti ilmiah kuat menunjukkan bahwa ODHA dengan viral load tidak terdeteksi tidak dapat menularkan HIV. Ini fakta!</div>
+          <div class="artikel-card-tag">Ibu Hamil</div>
+          <div class="artikel-card-title">Seorang Ibu Hamil di Mataram Terjangkit HIV/AIDS</div>
+          <div class="artikel-card-desc">Laporan kasus ibu hamil di Mataram yang terinfeksi HIV/AIDS dan langkah penanganan yang dilakukan.</div>
+          <div class="artikel-card-source">🔗 kebijakanaidsindonesia.net</div>
         </div>
-      </div>
+      </a>
+
     </div>
+
+    <!-- Kategori: Jurnal & Riset -->
+    <div class="artikel-section-label reveal" style="margin-top:32px">🔬 Jurnal &amp; Riset Ilmiah</div>
+    <div class="artikel-grid">
+
+      <a class="artikel-card reveal delay-1" href="https://journal.unpas.ac.id/index.php/humanitas/article/view/9616" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📄</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jurnal</div>
+          <div class="artikel-card-title">Artikel Jurnal Humanitas — Universitas Pasundan</div>
+          <div class="artikel-card-desc">Publikasi ilmiah dari Jurnal Humanitas UNPAS terkait isu HIV/AIDS dalam perspektif kesehatan masyarakat.</div>
+          <div class="artikel-card-source">🔗 journal.unpas.ac.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://jurnal.stikes-bhm.ac.id/index.php/jpkm/article/view/644" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📋</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jurnal</div>
+          <div class="artikel-card-title">Artikel JPKM — STIKES Bhakti Husada Mulia</div>
+          <div class="artikel-card-desc">Jurnal Pengabdian Kesehatan Masyarakat memuat penelitian terkait program penanggulangan HIV/AIDS di Indonesia.</div>
+          <div class="artikel-card-source">🔗 jurnal.stikes-bhm.ac.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://ejournal.lumbungpare.org/index.php/jim/article/view/1485" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🧬</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jurnal</div>
+          <div class="artikel-card-title">Artikel JIM — e-Journal Lumbung Pare</div>
+          <div class="artikel-card-desc">Penelitian ilmiah yang dipublikasikan dalam Jurnal Ilmiah Mahasiswa terkait dinamika HIV/AIDS di Indonesia.</div>
+          <div class="artikel-card-source">🔗 ejournal.lumbungpare.org</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Kategori: Edukasi & Video -->
+    <div class="artikel-section-label reveal" style="margin-top:32px">🎬 Edukasi &amp; Media</div>
+    <div class="artikel-grid">
+
+      <a class="artikel-card reveal delay-1" href="https://ykis.org/menilik-hiv-aids-dan-ims/melihat-situasi-wabah-hiv-aids-di-indonesia-saat-ini/" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🌐</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Edukasi</div>
+          <div class="artikel-card-title">Melihat Situasi Wabah HIV/AIDS di Indonesia Saat Ini</div>
+          <div class="artikel-card-desc">YKIS menyajikan gambaran komprehensif situasi wabah HIV/AIDS di Indonesia beserta analisis terkini.</div>
+          <div class="artikel-card-source">🔗 ykis.org</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://www.youtube.com/watch?v=wIiFVoAYooY" target="_blank" rel="noopener">
+        <div class="artikel-card-img">▶️</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Video</div>
+          <div class="artikel-card-title">Video Edukasi HIV/AIDS — YouTube</div>
+          <div class="artikel-card-desc">Tontonan edukatif seputar HIV/AIDS yang tersedia di YouTube untuk meningkatkan pemahaman masyarakat umum.</div>
+          <div class="artikel-card-source">🔗 youtube.com</div>
+        </div>
+      </a>
+
+    </div>
+
   </div>
 </div>
 
