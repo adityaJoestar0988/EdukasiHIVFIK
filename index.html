@@ -257,7 +257,7 @@
 
   /* ============ VIDEO EDU BUTTON ============ */
   .video-edu-btn {
-    display: inline-flex; align-items: center; gap: 10px;
+    display: inline-flex; align-items: center; gap: 12px;
     background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
     color: white; text-decoration: none;
     border-radius: 50px;
@@ -515,6 +515,8 @@
     font-size: 34px;
     box-shadow: 0 3px 10px rgba(26,58,143,0.13);
     transition: transform 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
   }
   .acc-row:hover .acc-row-icon { transform: scale(1.06); }
   .acc-row-right { flex: 1; display: flex; flex-direction: column; gap: 6px; }
@@ -1112,118 +1114,100 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
 
 <!-- ================ PENCEGAHAN PAGE ================ -->
 <div class="page" id="page-pencegahan">
-  <div class="inner-page">
+  <div class="inner-page" style="max-width:700px">
     <div class="page-title reveal">Pencegahan HIV</div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🛡️</span>
-        Pencegahan Seksual (ABC)
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p>Pendekatan <strong>ABC</strong> merupakan strategi pencegahan HIV yang komprehensif:</p>
-            <br>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
-                <div style="font-size:28px;font-weight:900;margin-bottom:4px">A</div>
-                <div style="font-weight:800;font-size:13px">Abstinence</div>
-                <div style="font-size:12px;opacity:0.85;margin-top:4px">Tidak melakukan hubungan seksual (bagi yang belum menikah)</div>
-              </div>
-              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
-                <div style="font-size:28px;font-weight:900;margin-bottom:4px">B</div>
-                <div style="font-weight:800;font-size:13px">Be Faithful</div>
-                <div style="font-size:12px;opacity:0.85;margin-top:4px">Setia pada satu pasangan yang tidak terinfeksi</div>
-              </div>
-              <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px;flex:1;min-width:120px;text-align:center">
-                <div style="font-size:28px;font-weight:900;margin-bottom:4px">C</div>
-                <div style="font-weight:800;font-size:13px">Condom</div>
-                <div style="font-size:12px;opacity:0.85;margin-top:4px">Penggunaan kondom secara konsisten dan benar</div>
-              </div>
-            </div>
-            <p>Penggunaan kondom lateks yang benar dan konsisten dapat mengurangi risiko penularan HIV secara seksual hingga <strong>85–95%</strong>.</p>
+    <!-- A: Abstinence & Aman -->
+    <div class="reveal delay-1">
+      <div class="acc-row" onclick="togglePanel('panel-pA', this.querySelector('.acc-row-label'))">
+        <div class="acc-row-icon" style="background:#dce8f8; font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#c0392b; text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff; letter-spacing:-1px;">A</div>
+        <div class="acc-row-right">
+          <button class="acc-row-label" id="lbl-pA">A – Abstinence &amp; Aman <span>▼</span></button>
+          <div class="acc-row-bar"></div>
+        </div>
+      </div>
+      <div class="acc-panel" id="panel-pA">
+        <div class="acc-panel-inner">
+          <div class="acc-panel-text" style="padding:16px 22px">
+            Menghindari perilaku seksual berisiko dan melakukan hubungan seksual secara aman dengan menggunakan kondom secara konsisten serta tidak berganti-ganti pasangan.
           </div>
         </div>
       </div>
     </div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">💉</span>
-        Pencegahan melalui Jarum Suntik
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <ul style="padding-left:18px;line-height:2.2">
-              <li>✅ Gunakan jarum suntik sekali pakai (disposable)</li>
-              <li>✅ Jangan berbagi jarum suntik, spuit, atau peralatan suntik</li>
-              <li>✅ Ikuti program jarum suntik bersih (harm reduction)</li>
-              <li>✅ Akses layanan substitusi opioid (metadon)</li>
-              <li>✅ Pastikan tato dan tindik menggunakan alat steril</li>
-              <li>✅ Tenaga kesehatan wajib menggunakan APD dan jarum sekali pakai</li>
-            </ul>
+    <!-- B: Blood Safety -->
+    <div class="reveal delay-2">
+      <div class="acc-row" onclick="togglePanel('panel-pB', this.querySelector('.acc-row-label'))">
+        <div class="acc-row-icon" style="background:#dce8f8; font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#c0392b; text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff;">B</div>
+        <div class="acc-row-right">
+          <button class="acc-row-label" id="lbl-pB">B – Blood Safety <span>▼</span></button>
+          <div class="acc-row-bar"></div>
+        </div>
+      </div>
+      <div class="acc-panel" id="panel-pB">
+        <div class="acc-panel-inner">
+          <div class="acc-panel-text" style="padding:16px 22px">
+            Tidak berbagi jarum suntik dan memastikan penggunaan alat medis, tato, atau tindik dalam kondisi steril untuk mencegah penularan melalui darah.
           </div>
         </div>
       </div>
     </div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🧬</span>
-        PrEP dan PEP
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <div style="margin-bottom:16px">
-              <strong>PrEP (Pre-Exposure Prophylaxis)</strong>
-              <p style="margin-top:6px">Penggunaan ARV oleh orang yang belum terinfeksi HIV namun berisiko tinggi, untuk mencegah infeksi. Efektivitas hingga <strong>99%</strong> jika digunakan dengan benar.</p>
-              <p style="margin-top:6px">Regimen: TDF/FTC (Truvada) atau TDF/3TC diminum setiap hari.</p>
-            </div>
-            <hr style="border-color:rgba(255,255,255,0.2);margin:14px 0">
-            <div>
-              <strong>PEP (Post-Exposure Prophylaxis)</strong>
-              <p style="margin-top:6px">Penggunaan ARV setelah kemungkinan terpapar HIV, dimulai <strong>dalam 72 jam</strong> setelah paparan dan dilanjutkan selama 28 hari.</p>
-              <p style="margin-top:6px">PEP bukan pengganti pencegahan rutin — hanya untuk keadaan darurat.</p>
-            </div>
+    <!-- C: Check Up -->
+    <div class="reveal delay-3">
+      <div class="acc-row" onclick="togglePanel('panel-pC', this.querySelector('.acc-row-label'))">
+        <div class="acc-row-icon" style="background:#fde8cc; font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#e67e22; text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff;">C</div>
+        <div class="acc-row-right">
+          <button class="acc-row-label" id="lbl-pC">C – Check Up (Tes HIV Rutin) <span>▼</span></button>
+          <div class="acc-row-bar"></div>
+        </div>
+      </div>
+      <div class="acc-panel" id="panel-pC">
+        <div class="acc-panel-inner">
+          <div class="acc-panel-text" style="padding:16px 22px">
+            Melakukan skrining atau tes HIV secara berkala, terutama bagi individu dengan faktor risiko, agar infeksi dapat terdeteksi dan ditangani lebih dini.
           </div>
         </div>
       </div>
     </div>
 
-    <div class="acc-item">
-      <button class="acc-header" onclick="toggleAcc(this)">
-        <span class="acc-icon">🩺</span>
-        Tes HIV Rutin (VCT)
-        <span class="acc-arrow">▼</span>
-      </button>
-      <div class="acc-body">
-        <div class="acc-content">
-          <div class="acc-content-text">
-            <p><strong>VCT (Voluntary Counseling and Testing)</strong> adalah layanan tes HIV secara sukarela yang dilengkapi konseling sebelum dan sesudah tes.</p>
-            <br>
-            <p><strong>Siapa yang dianjurkan tes HIV?</strong></p>
-            <ul style="padding-left:18px;line-height:2;margin-top:6px">
-              <li>Semua ibu hamil (skrining ANC)</li>
-              <li>Orang dengan risiko tinggi perilaku seksual</li>
-              <li>Pengguna napza suntik</li>
-              <li>Pasangan dari ODHA</li>
-              <li>Penderita TB, IMS, atau hepatitis</li>
-              <li>Bayi yang lahir dari ibu HIV-positif</li>
-            </ul>
-            <br>
-            <p>📌 Tes HIV bersifat <strong>rahasia dan gratis</strong> di semua Puskesmas dan Rumah Sakit pemerintah di Indonesia. Ketahui status HIV Anda!</p>
+    <!-- D: Drugs ARV -->
+    <div class="reveal delay-4">
+      <div class="acc-row" onclick="togglePanel('panel-pD', this.querySelector('.acc-row-label'))">
+        <div class="acc-row-icon" style="background:#dce8f8; font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#c0392b; text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff;">D</div>
+        <div class="acc-row-right">
+          <button class="acc-row-label" id="lbl-pD">D – Drugs (Terapi ARV) <span>▼</span></button>
+          <div class="acc-row-bar"></div>
+        </div>
+      </div>
+      <div class="acc-panel" id="panel-pD">
+        <div class="acc-panel-inner">
+          <div class="acc-panel-text" style="padding:16px 22px">
+            Bagi orang dengan HIV, rutin mengonsumsi terapi antiretroviral (ARV) untuk menurunkan jumlah virus sehingga risiko penularan semakin kecil.
           </div>
         </div>
       </div>
     </div>
 
-    <div class="clearfix">
+    <!-- E: Education & Eliminate Stigma -->
+    <div class="reveal delay-5">
+      <div class="acc-row" onclick="togglePanel('panel-pE', this.querySelector('.acc-row-label'))">
+        <div class="acc-row-icon" style="background:#dce8f8; font-family:'Montserrat',sans-serif; font-size:32px; font-weight:900; color:#c0392b; text-shadow:2px 2px 0 #fff,-1px -1px 0 #fff;">E</div>
+        <div class="acc-row-right">
+          <button class="acc-row-label" id="lbl-pE">E – Education &amp; Eliminate Stigma <span>▼</span></button>
+          <div class="acc-row-bar"></div>
+        </div>
+      </div>
+      <div class="acc-panel" id="panel-pE">
+        <div class="acc-panel-inner">
+          <div class="acc-panel-text" style="padding:16px 22px">
+            Meningkatkan edukasi tentang HIV serta mengurangi stigma agar masyarakat memahami cara penularan yang benar dan mendukung akses layanan kesehatan.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix reveal" style="margin-top:24px">
       <button class="btn-back" onclick="showPage('home')">⬅ KEMBALI</button>
     </div>
   </div>
@@ -1487,25 +1471,25 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
           <div class="kontak-icon">📞</div>
           <div>
             <div class="kontak-label">Telepon</div>
-            (0298) 321212
+            To Be Announce
           </div>
         </div>
         <div class="kontak-row">
           <div class="kontak-icon">✉️</div>
           <div>
             <div class="kontak-label">Email</div>
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd9b9496bd88968e8ad3989988">[email&#160;protected]</a>
+            <p>To Be Announce</p>
           </div>
         </div>
         <div class="kontak-row">
           <div class="kontak-icon">🌐</div>
           <div>
             <div class="kontak-label">Website</div>
-            fik.uksw.edu
+            To Be Announce
           </div>
         </div>
       </div>
-
+    <!--
       <div style="background:#f0f6ff;border-radius:14px;padding:18px;margin-top:8px">
         <div style="font-weight:800;color:#1a3a8f;margin-bottom:12px;font-size:15px">
           🆘 Layanan VCT Terdekat
@@ -1525,7 +1509,7 @@ setelah lahir sesuai anjuran tenaga kesehatan.</p>
     </div>
   </div>
 </div>
-
+-->
 <script>
   function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
