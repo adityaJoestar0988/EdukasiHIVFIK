@@ -34,6 +34,7 @@
   .hero-text { flex: 1; min-width: 280px; max-width: 540px; }
   .hero-welcome { font-family: 'Montserrat', sans-serif; font-size: clamp(22px, 3.5vw, 36px); color: var(--red); font-weight: 800; margin-bottom: 4px; }
   .hero-title { font-family: 'Montserrat', sans-serif; font-size: clamp(42px, 7vw, 80px); font-weight: 900; color: var(--blue); line-height: 1; margin-bottom: 20px; text-shadow: 2px 4px 0 rgba(26,58,143,0.10); }
+  .hero-subtitle { font-family: 'Nunito', sans-serif; font-size: clamp(15px, 2.5vw, 22px); font-weight: 800; color: #0c78c0; margin-bottom: 20px; }
   .hero-desc { font-size: 16px; line-height: 1.7; color: #444; font-weight: 600; margin-bottom: 32px; max-width: 460px; }
   .hero-cta { background: var(--red); color: white; border: none; border-radius: 40px; padding: 16px 48px; font-size: 20px; font-weight: 900; font-family: 'Montserrat', sans-serif; cursor: pointer; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(229,57,53,0.35); transition: transform 0.2s, box-shadow 0.2s; text-transform: uppercase; }
   .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(229,57,53,0.45); }
@@ -131,16 +132,12 @@
 <!-- ================ HOME PAGE ================ -->
 <div class="page active" id="page-home">
   <div class="hero" style="position:relative">
-    <svg style="position:absolute;top:16px;right:24px;width:80px" viewBox="0 0 100 120">
-      <path d="M50 5 L90 25 L90 65 Q90 95 50 115 Q10 95 10 65 L10 25 Z" fill="#1a3a8f" stroke="#4a90d9" stroke-width="2"/>
-      <circle cx="50" cy="60" r="22" fill="none" stroke="#b3c8e8" stroke-width="3"/>
-      <path d="M38 60 L46 68 L63 51" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M50 38 Q54 45 54 50 Q54 56 50 60 Q46 56 46 50 Q46 45 50 38Z" fill="#e53935"/>
-      <path d="M50 60 L45 72 M50 60 L55 72" stroke="#e53935" stroke-width="2.5" fill="none"/>
-    </svg>
+   <svg style="position:absolute;top:16px;right:24px;width:150px">
+    <image href="gambar/2.png" x="-10" y="25" width="100" height="100"/>
+   </svg>
     <div class="hero-text">
-      <div class="hero-welcome">Welcome to</div>
-      <div class="hero-title">Digital<br>Edu-HIV</div>
+      <div class="hero-title">Digital EduHIV</div>
+      <div class="hero-subtitle"> "Mari Bersama Lindungi Diri, Lindungi Generasi"</div>
       <p class="hero-desc">Website edukasi HIV/AIDS ini menyediakan layanan informasi digital yang lengkap, akurat, dan mudah dipahami mengenai HIV, mulai dari pengertian, penularan, gejala, pencegahan, hingga pengobatan ARV dan pencegahan ibu-ke-bayi. Dilengkapi dengan video edukasi inspiratif sebagai intervensi utama.</p>
       <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
         <button class="hero-cta" onclick="showMenuSection()">KENALI HIV</button>
@@ -151,31 +148,8 @@
       </div>
     </div>
     <div class="hero-image">
-      <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="190" cy="190" r="170" fill="rgba(179,200,232,0.25)"/>
-        <ellipse cx="190" cy="130" rx="42" ry="48" fill="#f5cba7"/>
-        <ellipse cx="190" cy="105" rx="44" ry="30" fill="#2c1a0e"/>
-        <rect x="148" y="105" width="16" height="40" rx="8" fill="#2c1a0e"/>
-        <rect x="216" y="105" width="16" height="40" rx="8" fill="#2c1a0e"/>
-        <rect x="148" y="170" width="84" height="100" rx="12" fill="white"/>
-        <rect x="155" y="170" width="30" height="100" rx="0" fill="#e8f4fd"/>
-        <rect x="170" y="172" width="40" height="30" fill="#4a90d9"/>
-        <rect x="182" y="185" width="16" height="5" rx="2" fill="#e53935"/>
-        <rect x="187" y="180" width="5" height="16" rx="2" fill="#e53935"/>
-        <rect x="110" y="172" width="42" height="18" rx="9" fill="white"/>
-        <rect x="228" y="172" width="42" height="18" rx="9" fill="white"/>
-        <ellipse cx="112" cy="181" rx="12" ry="12" fill="#f5cba7"/>
-        <ellipse cx="268" cy="181" rx="12" ry="12" fill="#f5cba7"/>
-        <rect x="230" y="155" width="70" height="90" rx="8" fill="#f0ead6" stroke="#c0b090" stroke-width="2"/>
-        <path d="M265 175 Q270 185 270 192 Q270 200 265 206 Q260 200 260 192 Q260 185 265 175Z" fill="#e53935"/>
-        <path d="M265 206 L260 218 M265 206 L270 218" stroke="#e53935" stroke-width="3" fill="none"/>
-        <ellipse cx="90" cy="295" rx="28" ry="28" fill="#4a7fbf"/>
-        <rect x="62" y="290" width="56" height="50" rx="14" fill="#4a7fbf"/>
-        <ellipse cx="155" cy="300" rx="24" ry="24" fill="#6a9fd8"/>
-        <rect x="131" y="296" width="48" height="44" rx="12" fill="#6a9fd8"/>
-        <ellipse cx="215" cy="298" rx="24" ry="24" fill="#5590ce"/>
-        <rect x="191" y="294" width="48" height="44" rx="12" fill="#5590ce"/>
-        <line x1="50" y1="340" x2="330" y2="340" stroke="#b3c8e8" stroke-width="2"/>
+      <svg viewBox="0 0 200 200" fill="none">
+        <image href="gambar/1.png" x="0" y="0" width="200" height="200"/>
       </svg>
     </div>
   </div>
@@ -203,18 +177,21 @@
         </div>
       </div>
       <div class="acc-panel" id="panel-pengertian">
-        <div class="acc-panel-inner">
-          <div class="acc-panel-imgs">
-            <div class="acc-panel-img" style="background:linear-gradient(180deg,#7b1c1c,#c62828)">🦠</div>
-            <div class="acc-panel-img" style="background:linear-gradient(180deg,#c62828,#8b0000)">🔬</div>
-          </div>
-          <div class="acc-panel-text">
-            <p><strong>HIV (Human Immunodeficiency Virus)</strong> adalah virus yang menyerang sistem kekebalan tubuh manusia, khususnya sel CD4 atau sel T-helper yang berperan penting dalam melindungi tubuh dari berbagai penyakit infeksi. Virus ini secara perlahan melemahkan kemampuan tubuh untuk melawan infeksi dan penyakit tertentu.</p><br>
-            <p>HIV termasuk dalam kelompok <strong>retrovirus</strong>, yang berarti virus ini menggunakan RNA sebagai materi genetiknya dan menggunakan enzim <em>reverse transcriptase</em> untuk mengubah RNA menjadi DNA di dalam sel inang. <em>Nursalam, Ninuk, D.M. (2022).</em></p><br>
-            <p><strong>AIDS (Acquired Immunodeficiency Syndrome)</strong> adalah stadium akhir infeksi HIV saat CD4 &lt; 200 sel/μL, membuat tubuh tidak mampu melawan infeksi oportunistik yang mengancam jiwa.</p>
-          </div>
-        </div>
+  <div class="acc-panel-inner" style="display:flex; align-items:stretch; gap:16px;">
+    <!-- Gambar: 50% lebar -->
+    <div class="acc-panel-imgs" style="flex:0 0 50%; min-width:0;">
+      <div class="acc-panel-img" style="height:100%; min-height:200px;">
+        <img src="gambar/3.jpeg" alt="gambar" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
       </div>
+    </div>
+    <!-- Teks: sisa 50% -->
+    <div class="acc-panel-text" style="flex:1; min-width:0;">
+      <p><strong>HIV (Human Immunodeficiency Virus)</strong> adalah virus yang menyerang sistem kekebalan tubuh manusia, khususnya sel CD4 atau sel T-helper yang berperan penting dalam melindungi tubuh dari berbagai penyakit infeksi. Virus ini secara perlahan melemahkan kemampuan tubuh untuk melawan infeksi dan penyakit tertentu.</p><br>
+      <p>HIV termasuk dalam kelompok <strong>retrovirus</strong>, yang berarti virus ini menggunakan RNA sebagai materi genetiknya dan menggunakan enzim <em>reverse transcriptase</em> untuk mengubah RNA menjadi DNA di dalam sel inang. <em>Nursalam, Ninuk, D.M. (2022).</em></p><br>
+      <p><strong>AIDS (Acquired Immunodeficiency Syndrome)</strong> adalah stadium akhir infeksi HIV saat CD4 &lt; 200 sel/μL, membuat tubuh tidak mampu melawan infeksi oportunistik yang mengancam jiwa.</p>
+    </div>
+  </div>
+</div>
     </div>
     <div class="reveal delay-2">
       <div class="acc-row" onclick="togglePanel('panel-penularan', this.querySelector('.acc-row-label'))">
@@ -275,41 +252,103 @@
     <div class="page-title reveal">Gejala &amp; Dampak HIV</div>
     <div class="acc-item reveal delay-1">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">🤱</span>Fase Akut<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
-        <p><strong>Fase akut</strong> HIV umumnya terjadi 2–4 minggu setelah paparan, dengan gejala menyerupai flu: demam, kelelahan, ruam, sakit kepala, pembengkakan kelenjar getah bening, dan diare. Pada tahap ini terjadi kerusakan signifikan pada sistem imun, termasuk hilangnya hingga 60% sel CD4 memori dalam dua minggu pertama.</p>
-        <br><p>Pada ibu hamil, fase akut juga muncul dalam rentang waktu yang sama dengan keluhan demam, nyeri tenggorokan, ruam, pembesaran kelenjar getah bening, serta nyeri otot dan sendi. Viral load sangat tinggi sehingga meningkatkan risiko transmisi dari ibu ke janin (Hastuti et al., 2022).</p>
-      </div></div></div>
+      <div class="acc-body">
+        <div class="acc-content">
+         <div class="acc-content-text" style="display:flex; align-items:stretch; gap:16px;">
+          <div style="flex:0 0 50%; min-width:0;">
+          <img src="gambar/4.png" alt="gambar" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+          </div>
+      <div style="flex:1; min-width:0;">
+       <p><strong>Fase akut</strong> HIV umumnya terjadi 2–4 minggu setelah paparan, dengan gejala menyerupai flu: demam, kelelahan, ruam, sakit kepala, pembengkakan kelenjar getah bening, dan diare. Pada tahap ini terjadi kerusakan signifikan pada sistem imun, termasuk hilangnya hingga 60% sel CD4 memori dalam dua minggu pertama.</p>
+        <br><p>Pada ibu hamil, fase akut juga muncul dalam rentang waktu yang sama dengan keluhan demam, nyeri tenggorokan, ruam, pembesaran kelenjar getah bening, serta nyeri otot dan sendi. Viral load sangat tinggi sehingga meningkatkan risiko transmisi dari ibu ke janin (Hastuti et al., 2022).</p>      
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">❤️</span>Fase Laten<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
-        <p>Virus bereplikasi secara aktif di dalam tubuh, namun penderita umumnya tidak menunjukkan gejala klinis yang nyata. Pada ibu hamil dengan HIV dalam fase laten ini menjadi sumber penularan bagi janinnya. Jika tidak terdeteksi, kondisi ini dapat berkembang ke tahap lebih berat dengan gejala demam persisten, penurunan berat badan, pembengkakan kelenjar getah bening, keringat malam, dan kelemahan tubuh (Pravitasari et al., 2022).</p>
-      </div></div></div>
+      <div class="acc-body">
+        <div class="acc-content">
+         <div class="acc-content-text" style="display:flex; align-items:stretch; gap:16px;">
+          <div style="flex:0 0 50%; min-width:0;">
+          <img src="gambar/5.png" alt="gambar" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+          </div>
+          <div style="flex:1; min-width:0;">
+          <p>Virus bereplikasi secara aktif di dalam tubuh, namun penderita umumnya tidak menunjukkan gejala klinis yang nyata. Pada ibu hamil dengan HIV dalam fase laten ini menjadi sumber penularan bagi janinnya. Jika tidak terdeteksi, kondisi ini dapat berkembang ke tahap lebih berat dengan gejala demam persisten, penurunan berat badan, pembengkakan kelenjar getah bening, keringat malam, dan kelemahan tubuh (Pravitasari et al., 2022).</p>
+        </div>
+      </div>
+  </div>
+</div>
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">🎗️</span>Fase AIDS<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
+     <div class="acc-body">
+        <div class="acc-content">
+         <div class="acc-content-text" style="display:flex; align-items:stretch; gap:16px;">
+          <div style="flex:0 0 50%; min-width:0;">
+          <img src="gambar/6.png" alt="gambar" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+          </div>
+          <div style="flex:1; min-width:0;">
         <p><strong>AIDS</strong> adalah tahap akhir infeksi HIV: CD4 &lt; 200 sel/mm³ dan munculnya infeksi oportunistik seperti tuberkulosis, kandidiasis, dan pneumonia. Pada ibu hamil yang mengalami AIDS, risiko komplikasi kehamilan dan penularan ke bayi meningkat signifikan jika tidak mendapat terapi ARV optimal.</p>
-      </div></div></div>
+        </div>
+      </div>
+  </div>
+</div>
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">🧍</span>Dampak Fisik<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
+      <div class="acc-body">
+        <div class="acc-content">
+         <div class="acc-content-text" style="display:flex; align-items:stretch; gap:16px;">
+          <div style="flex:0 0 50%; min-width:0;">
+          <img src="gambar/7.png" alt="gambar" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+          </div>
+          <div style="flex:1; min-width:0;">
         <p>Dampak fisik HIV/AIDS meliputi inflamasi kronis, risiko penyakit jantung, osteoporosis, gangguan metabolisme, penurunan massa otot dan kelelahan kronis, serta gangguan kognitif. Pada ibu hamil, HIV menyebabkan imunosupresi berat sehingga rentan terhadap infeksi oportunistik seperti kandidiasis, gangguan pernapasan, dan diare kronis.</p>
-      </div></div></div>
+        </div>
+      </div>
+  </div>
+</div>
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">🧠</span>Dampak Psikologis<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
+    <div class="acc-body">
+  <div class="acc-content">
+    <div class="acc-content-text" style="display:flex; align-items:center; gap:16px;">
+      <div style="flex:0 0 45%; min-width:0;">
+        <img src="gambar/8.png" alt="gambar" style="
+          width:100%;
+          aspect-ratio: 1153/589;
+          object-fit:cover;
+          object-position: center;
+          border-radius:8px;
+          display:block;
+        ">
+      </div>
+      <div style="flex:1; min-width:0;">
         <p>Sebagian besar ODHA mengalami tekanan mental signifikan setelah mengetahui status kesehatannya: penolakan diagnosa, stres berat, dan depresi. Sekitar sepertiga ODHA pernah mengalami ide untuk mengakhiri hidup. Stigma dan diskriminasi sosial memperparah kecemasan, mendorong ODHA menarik diri dari lingkungan sosial (Syam, 2025).</p>
-        <br><p>Ibu hamil dengan HIV memiliki risiko lebih tinggi mengalami depresi, kecemasan, dan stres prenatal. Evaluasi kesehatan mental menjadi aspek penting dalam pencegahan gangguan psikologis yang lebih berat.</p>
-      </div></div></div>
+        <br>
+        <p>Ibu hamil dengan HIV memiliki risiko lebih tinggi mengalami depresi, kecemasan, dan stres prenatal. Evaluasi kesehatan mental menjadi aspek penting dalam pencegahan gangguan psikologis yang lebih berat.</p>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">👥</span>Stigma Sosial<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
+       <div class="acc-body">
+        <div class="acc-content">
+         <div class="acc-content-text" style="display:flex; align-items:stretch; gap:16px;">
+          <div style="flex:0 0 50%; min-width:0;">
+          <img src="gambar/9.png" alt="gambar" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+          </div>
+          <div style="flex:1; min-width:0;">
         <p>Stigma terhadap ODHA akibat kurangnya pemahaman masyarakat menimbulkan dampak psikologis: sedih, malu, cemas, dan rendah diri. Stigma membuat sebagian orang enggan mengungkapkan status atau mencari layanan medis. Kondisi serupa dialami ibu hamil dengan HIV yang takut penilaian sosial sehingga ragu menjalani pemeriksaan (Ninef et al., 2023).</p>
-      </div></div></div>
+        </div>
+      </div>
+  </div>
+</div>
     </div>
     <div class="clearfix"><button class="btn-back" onclick="showPage('home')">⬅ KEMBALI</button></div>
   </div>
@@ -321,7 +360,20 @@
     <div class="page-title reveal">HIV pada Ibu Hamil</div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">🤰</span>Risiko Ibu ke Bayi<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
+  <div class="acc-body">
+  <div class="acc-content">
+    <div class="acc-content-text" style="display:flex; align-items:center; gap:16px;">
+      <div style="flex:0 0 40%; min-width:0;">
+        <img src="gambar/10.png" alt="gambar" style="
+          width:70%;
+          aspect-ratio: 471/1539;
+          object-fit:cover;
+          object-position: center;
+          border-radius:8px;
+          display:block;
+        ">
+      </div>
+      <div style="flex:1; min-width:0;">
         <p>Lebih dari 90% kasus HIV pada bayi terjadi akibat penularan dari ibu kepada anak (MTCT/transmisi vertikal). Penularan dapat berlangsung selama kehamilan, persalinan, maupun saat menyusui.</p>
         <br><p><strong>Kapan penularan bisa terjadi?</strong></p>
         <ul style="padding-left:18px;line-height:2;margin-top:6px">
@@ -330,7 +382,10 @@
           <li>🍼 <strong>Saat menyusui</strong> — risiko 5–20%: HIV terdapat dalam ASI dan dapat masuk melalui lapisan saluran cerna bayi yang masih sensitif.</li>
         </ul>
         <br><p>Risiko penularan dapat ditekan hingga sangat rendah apabila ibu rutin mengonsumsi ARV selama kehamilan dan bayi mendapat obat pencegahan setelah lahir.</p>
-      </div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="clearfix" style="margin-top:16px"><button class="btn-back" onclick="showPage('home')">⬅ KEMBALI</button></div>
   </div>
@@ -348,14 +403,30 @@
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">🏥</span>Golongan dan Jenis Obat ARV<span class="acc-arrow">▼</span></button>
-      <div class="acc-body"><div class="acc-content"><div class="acc-content-text">
+      <div class="acc-body">
+  <div class="acc-content">
+    <div class="acc-content-text" style="display:flex; align-items:center; gap:16px;">
+      <div style="flex:0 0 33%; min-width:0;">
+        <img src="gambar/11.png" alt="gambar" style="
+          width:70%;
+          aspect-ratio: 471/1539;
+          object-fit:cover;
+          object-position: center;
+          border-radius:8px;
+          display:block;
+        ">
+      </div>
+      <div style="flex:1; min-width:0;">
         <p><strong>Golongan ARV yang digunakan di Indonesia:</strong></p><br>
         <p><strong>1. Tenofovir</strong> — Menghentikan perkembangan virus HIV, menjaga daya tahan tubuh tetap kuat.</p>
         <p><strong>2. Lamivudine</strong> — Menghambat pertumbuhan virus HIV sehingga jumlah virus dalam darah menurun.</p>
         <p><strong>3. Dolutegravir</strong> — Mencegah virus HIV masuk dan menyatu dengan sel tubuh manusia.</p>
         <p><strong>4. Zidovudine</strong> — Mengurangi jumlah virus HIV dalam darah; sering digunakan untuk mencegah penularan ibu ke bayi.</p>
         <p><strong>5. Nevirapine</strong> — Menghambat enzim yang dibutuhkan virus untuk berkembang.</p>
-      </div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="acc-item">
       <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-icon">📋</span>Cara dan Waktu Minum ARV<span class="acc-arrow">▼</span></button>
@@ -392,35 +463,35 @@
     <div class="reveal delay-1">
       <div class="acc-row" onclick="togglePanel('panel-pA', this.querySelector('.acc-row-label'))">
         <div class="acc-row-icon" style="background:#dce8f8;font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#c0392b;">A</div>
-        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pA">A – Abstinence &amp; Aman <span>▼</span></button><div class="acc-row-bar"></div></div>
+        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pA">A-Absistensi (Tidak melakukan hubungan seksual beresiko)<span>▼</span></button><div class="acc-row-bar"></div></div>
       </div>
       <div class="acc-panel" id="panel-pA"><div class="acc-panel-inner"><div class="acc-panel-text" style="padding:16px 22px">Menghindari perilaku seksual berisiko dan melakukan hubungan seksual secara aman dengan menggunakan kondom secara konsisten serta tidak berganti-ganti pasangan.</div></div></div>
     </div>
     <div class="reveal delay-2">
       <div class="acc-row" onclick="togglePanel('panel-pB', this.querySelector('.acc-row-label'))">
         <div class="acc-row-icon" style="background:#dce8f8;font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#c0392b;">B</div>
-        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pB">B – Blood Safety <span>▼</span></button><div class="acc-row-bar"></div></div>
+        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pB">B – Bersih dan Aman Darah <span>▼</span></button><div class="acc-row-bar"></div></div>
       </div>
       <div class="acc-panel" id="panel-pB"><div class="acc-panel-inner"><div class="acc-panel-text" style="padding:16px 22px">Tidak berbagi jarum suntik dan memastikan penggunaan alat medis, tato, atau tindik dalam kondisi steril untuk mencegah penularan melalui darah.</div></div></div>
     </div>
     <div class="reveal delay-3">
       <div class="acc-row" onclick="togglePanel('panel-pC', this.querySelector('.acc-row-label'))">
         <div class="acc-row-icon" style="background:#fde8cc;font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#e67e22;">C</div>
-        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pC">C – Check Up (Tes HIV Rutin) <span>▼</span></button><div class="acc-row-bar"></div></div>
+        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pC">C – Cek HIV Secara Rutin<span>▼</span></button><div class="acc-row-bar"></div></div>
       </div>
       <div class="acc-panel" id="panel-pC"><div class="acc-panel-inner"><div class="acc-panel-text" style="padding:16px 22px">Melakukan skrining atau tes HIV secara berkala, terutama bagi individu dengan faktor risiko, agar infeksi dapat terdeteksi dan ditangani lebih dini.</div></div></div>
     </div>
     <div class="reveal delay-4">
       <div class="acc-row" onclick="togglePanel('panel-pD', this.querySelector('.acc-row-label'))">
         <div class="acc-row-icon" style="background:#dce8f8;font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#c0392b;">D</div>
-        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pD">D – Drugs (Terapi ARV) <span>▼</span></button><div class="acc-row-bar"></div></div>
+        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pD">D – Dukungan Pengobatan (Terapi ARV)<span>▼</span></button><div class="acc-row-bar"></div></div>
       </div>
       <div class="acc-panel" id="panel-pD"><div class="acc-panel-inner"><div class="acc-panel-text" style="padding:16px 22px">Bagi orang dengan HIV, rutin mengonsumsi terapi antiretroviral (ARV) untuk menurunkan jumlah virus sehingga risiko penularan semakin kecil.</div></div></div>
     </div>
     <div class="reveal delay-5">
       <div class="acc-row" onclick="togglePanel('panel-pE', this.querySelector('.acc-row-label'))">
         <div class="acc-row-icon" style="background:#dce8f8;font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#c0392b;">E</div>
-        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pE">E – Education &amp; Eliminate Stigma <span>▼</span></button><div class="acc-row-bar"></div></div>
+        <div class="acc-row-right"><button class="acc-row-label" id="lbl-pE">E – Edukasi dan Eliminasi Stigma<span>▼</span></button><div class="acc-row-bar"></div></div>
       </div>
       <div class="acc-panel" id="panel-pE"><div class="acc-panel-inner"><div class="acc-panel-text" style="padding:16px 22px">Meningkatkan edukasi tentang HIV serta mengurangi stigma agar masyarakat memahami cara penularan yang benar dan mendukung akses layanan kesehatan.</div></div></div>
     </div>
@@ -432,25 +503,232 @@
 <div class="page" id="page-artikel">
   <div class="inner-page" style="max-width:960px">
     <div class="page-title reveal">Artikel &amp; Referensi</div>
-    <p style="text-align:center;color:#555;font-size:15px;margin-bottom:28px;font-weight:600" class="reveal">Kumpulan berita, jurnal, dan sumber terpercaya seputar HIV/AIDS di Indonesia.</p>
+    <p style="text-align:center;color:#555;font-size:15px;margin-bottom:28px;font-weight:600" class="reveal">Kumpulan berita, jurnal, dan sumber terpercaya seputar HIV/AIDS di Indonesia. Klik untuk membaca selengkapnya.</p>
+
+    <!-- Kategori: Berita & Data Nasional -->
     <div class="artikel-section-label reveal">📰 Berita &amp; Data Nasional</div>
     <div class="artikel-grid">
-      <a class="artikel-card reveal delay-1" href="https://en.antaranews.com/news/342746/indonesia-records-17136-tb-hiv-cases-in-2024-up-from-2022" target="_blank" rel="noopener"><div class="artikel-card-img">🦠</div><div class="artikel-card-body"><div class="artikel-card-tag">Data Nasional</div><div class="artikel-card-title">Indonesia Records 17,136 TB-HIV Cases in 2024</div><div class="artikel-card-desc">Antara News melaporkan peningkatan kasus ko-infeksi TB-HIV di Indonesia dari tahun 2022 hingga 2024.</div><div class="artikel-card-source">🔗 antaranews.com</div></div></a>
-      <a class="artikel-card reveal delay-2" href="https://www.antaranews.com/berita/4913705/per-maret-2025-kemenkes-temukan-358683-orang-dengan-hiv-di-ri" target="_blank" rel="noopener"><div class="artikel-card-img">📊</div><div class="artikel-card-body"><div class="artikel-card-tag">Data Nasional</div><div class="artikel-card-title">Per Maret 2025: Kemenkes Temukan 358.683 Orang dengan HIV di RI</div><div class="artikel-card-desc">Data terbaru jumlah ODHIV yang ditemukan di Indonesia hingga Maret 2025.</div><div class="artikel-card-source">🔗 antaranews.com</div></div></a>
-      <a class="artikel-card reveal delay-3" href="https://health.detik.com/berita-detikhealth/d-8034016/sebaran-kasus-hiv-di-indonesia-2025-ini-pentingnya-edukasi-dan-deteksi-dini" target="_blank" rel="noopener"><div class="artikel-card-img">🗺️</div><div class="artikel-card-body"><div class="artikel-card-tag">Edukasi</div><div class="artikel-card-title">Sebaran Kasus HIV di Indonesia 2025</div><div class="artikel-card-desc">Detik Health mengulas peta sebaran kasus HIV di Indonesia 2025 dan urgensi edukasi serta deteksi dini.</div><div class="artikel-card-source">🔗 health.detik.com</div></div></a>
+
+      <a class="artikel-card reveal delay-1" href="https://en.antaranews.com/news/342746/indonesia-records-17136-tb-hiv-cases-in-2024-up-from-2022" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🦠</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Data Nasional</div>
+          <div class="artikel-card-title">Indonesia Records 17,136 TB-HIV Cases in 2024, Up from 2022</div>
+          <div class="artikel-card-desc">Antara News melaporkan peningkatan kasus ko-infeksi TB-HIV di Indonesia dari tahun 2022 hingga 2024.</div>
+          <div class="artikel-card-source">🔗 antaranews.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://www.antaranews.com/berita/4913705/per-maret-2025-kemenkes-temukan-358683-orang-dengan-hiv-di-ri" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📊</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Data Nasional</div>
+          <div class="artikel-card-title">Per Maret 2025: Kemenkes Temukan 358.683 Orang dengan HIV di RI</div>
+          <div class="artikel-card-desc">Kementerian Kesehatan merilis data terbaru jumlah ODHIV yang ditemukan di Indonesia hingga Maret 2025.</div>
+          <div class="artikel-card-source">🔗 antaranews.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://health.detik.com/berita-detikhealth/d-8034016/sebaran-kasus-hiv-di-indonesia-2025-ini-pentingnya-edukasi-dan-deteksi-dini" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🗺️</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Edukasi</div>
+          <div class="artikel-card-title">Sebaran Kasus HIV di Indonesia 2025: Pentingnya Edukasi dan Deteksi Dini</div>
+          <div class="artikel-card-desc">Detik Health mengulas peta sebaran kasus HIV di Indonesia 2025 dan urgensi edukasi serta deteksi dini.</div>
+          <div class="artikel-card-source">🔗 health.detik.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-1" href="https://linkpapua.id/papua-dan-papua-tengah-catat-positivity-rate-tertinggi-kasus-hiv-di-indonesia/" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📍</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Regional</div>
+          <div class="artikel-card-title">Papua dan Papua Tengah Catat Positivity Rate Tertinggi HIV di Indonesia</div>
+          <div class="artikel-card-desc">Provinsi Papua dan Papua Tengah mencatat tingkat positivitas HIV tertinggi secara nasional.</div>
+          <div class="artikel-card-source">🔗 linkpapua.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://www.liputan6.com/health/read/6056749/kemenkes-ungkap-ada-2700-kasus-hiv-pada-remaja-bagaimana-intervensinya" target="_blank" rel="noopener">
+        <div class="artikel-card-img">👦</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Remaja</div>
+          <div class="artikel-card-title">Kemenkes Ungkap Ada 2.700 Kasus HIV pada Remaja</div>
+          <div class="artikel-card-desc">Liputan6 mengangkat temuan Kemenkes soal ribuan kasus HIV pada remaja dan upaya intervensi yang dilakukan.</div>
+          <div class="artikel-card-source">🔗 liputan6.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://www.komnasham.go.id/index.php/news/2024/10/1/2567/kasus-anak-dengan-hiv-aids-tinggi-perlu-edukasi-berbasis-ham.html" target="_blank" rel="noopener">
+        <div class="artikel-card-img">👶</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Anak &amp; HAM</div>
+          <div class="artikel-card-title">Kasus Anak dengan HIV/AIDS Tinggi: Perlu Edukasi Berbasis HAM</div>
+          <div class="artikel-card-desc">Komnas HAM menyoroti tingginya kasus HIV pada anak dan perlunya pendekatan edukasi berbasis hak asasi manusia.</div>
+          <div class="artikel-card-source">🔗 komnasham.go.id</div>
+        </div>
+      </a>
+
     </div>
+
+    <!-- Kategori: Berita Regional -->
     <div class="artikel-section-label reveal" style="margin-top:32px">🏙️ Berita Regional</div>
     <div class="artikel-grid">
-      <a class="artikel-card reveal delay-1" href="https://regional.kompas.com/read/2024/12/13/080618178/kasus-hiv-aids-di-sumbawa-meningkat-sejak-2022-kini-tercatat-179-kasus" target="_blank" rel="noopener"><div class="artikel-card-img">📈</div><div class="artikel-card-body"><div class="artikel-card-tag">Sumbawa</div><div class="artikel-card-title">Kasus HIV/AIDS di Sumbawa Meningkat</div><div class="artikel-card-desc">Kompas Regional melaporkan tren peningkatan HIV/AIDS di Sumbawa sejak 2022.</div><div class="artikel-card-source">🔗 kompas.com</div></div></a>
-      <a class="artikel-card reveal delay-2" href="https://sumedangkab.go.id/berita/detail/temuan-kasus-hiv-ibu-hamil-capai-11-orang" target="_blank" rel="noopener"><div class="artikel-card-img">🤱</div><div class="artikel-card-body"><div class="artikel-card-tag">Ibu Hamil</div><div class="artikel-card-title">Temuan Kasus HIV pada Ibu Hamil di Sumedang</div><div class="artikel-card-desc">Kabupaten Sumedang melaporkan 11 ibu hamil teridentifikasi HIV dalam program skrining ANC.</div><div class="artikel-card-source">🔗 sumedangkab.go.id</div></div></a>
-      <a class="artikel-card reveal delay-3" href="https://www.papua.go.id/view-detail-berita-4302/kasus-hivaids-papua-tembus-26-ribu-kasus.html" target="_blank" rel="noopener"><div class="artikel-card-img">🌏</div><div class="artikel-card-body"><div class="artikel-card-tag">Papua</div><div class="artikel-card-title">Kasus HIV/AIDS Papua Tembus 26 Ribu Kasus</div><div class="artikel-card-desc">Pemerintah Provinsi Papua melaporkan kumulatif kasus HIV/AIDS melampaui 26.000.</div><div class="artikel-card-source">🔗 papua.go.id</div></div></a>
+
+      <a class="artikel-card reveal delay-1" href="https://regional.kompas.com/read/2024/12/13/080618178/kasus-hiv-aids-di-sumbawa-meningkat-sejak-2022-kini-tercatat-179-kasus" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📈</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Sumbawa</div>
+          <div class="artikel-card-title">Kasus HIV/AIDS di Sumbawa Meningkat Sejak 2022, Kini 179 Kasus</div>
+          <div class="artikel-card-desc">Kompas Regional melaporkan tren peningkatan HIV/AIDS di Sumbawa sejak tahun 2022 hingga 179 kasus tercatat.</div>
+          <div class="artikel-card-source">🔗 kompas.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://dinkes.acehprov.go.id/detailpost/kasus-hiv-dan-sifilis-meningkat-didominasi-ibu-rumah-tangga" target="_blank" rel="noopener">
+        <div class="artikel-card-img">👩‍👧</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Aceh</div>
+          <div class="artikel-card-title">Kasus HIV dan Sifilis Meningkat, Didominasi Ibu Rumah Tangga</div>
+          <div class="artikel-card-desc">Dinkes Aceh melaporkan peningkatan kasus HIV dan sifilis yang mayoritas dialami oleh ibu rumah tangga.</div>
+          <div class="artikel-card-source">🔗 dinkes.acehprov.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://cimahikota.go.id/berita/detail/82231-dinas-kesehatan-kota-cimahi-temukan-88-kasus-hiv-aids-baru-tahun-ini" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🏥</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Cimahi</div>
+          <div class="artikel-card-title">Dinkes Cimahi Temukan 88 Kasus HIV/AIDS Baru Tahun Ini</div>
+          <div class="artikel-card-desc">Dinas Kesehatan Kota Cimahi mencatat 88 kasus HIV/AIDS baru dalam satu tahun berjalan.</div>
+          <div class="artikel-card-source">🔗 cimahikota.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-1" href="https://www.papua.go.id/view-detail-berita-4302/kasus-hivaids-papua-tembus-26-ribu-kasus.html" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🌏</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Papua</div>
+          <div class="artikel-card-title">Kasus HIV/AIDS Papua Tembus 26 Ribu Kasus</div>
+          <div class="artikel-card-desc">Pemerintah Provinsi Papua melaporkan jumlah kumulatif kasus HIV/AIDS yang telah melampaui angka 26.000.</div>
+          <div class="artikel-card-source">🔗 papua.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://rakyatbengkulu.disway.id/bengkulu-raya/read/711653/kasus-hivaids-di-kota-bengkulu-capai-1216-dinkes-ingatkan-warga-waspada-penularan" target="_blank" rel="noopener">
+        <div class="artikel-card-img">⚠️</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Bengkulu</div>
+          <div class="artikel-card-title">Kasus HIV/AIDS di Kota Bengkulu Capai 1.216</div>
+          <div class="artikel-card-desc">Dinkes Bengkulu mengingatkan warga agar waspada penularan HIV setelah kasus melampaui angka 1.216.</div>
+          <div class="artikel-card-source">🔗 rakyatbengkulu.disway.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://sumedangkab.go.id/berita/detail/temuan-kasus-hiv-ibu-hamil-capai-11-orang" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🤱</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Ibu Hamil</div>
+          <div class="artikel-card-title">Temuan Kasus HIV pada Ibu Hamil Capai 11 Orang di Sumedang</div>
+          <div class="artikel-card-desc">Kabupaten Sumedang melaporkan 11 ibu hamil teridentifikasi HIV dalam program skrining ANC.</div>
+          <div class="artikel-card-source">🔗 sumedangkab.go.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-1" href="https://beritajatim.com/lima-ibu-hamil-di-magetan-terinfeksi-hiv-total-kasus-tembus-108" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🏩</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jawa Timur</div>
+          <div class="artikel-card-title">Lima Ibu Hamil di Magetan Terinfeksi HIV, Total Kasus Tembus 108</div>
+          <div class="artikel-card-desc">Berita Jatim melaporkan lima ibu hamil di Magetan positif HIV, dengan total akumulasi kasus mencapai 108.</div>
+          <div class="artikel-card-source">🔗 beritajatim.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://beritajatim.com/lima-ibu-hamil-di-magetan-terinfeksi-hiv-total-kasus-tembus-108" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🩺</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jawa Timur</div>
+          <div class="artikel-card-title">Update: Kasus HIV Magetan Tembus 108 — Ibu Hamil Jadi Perhatian</div>
+          <div class="artikel-card-desc">Laporan lanjutan Berita Jatim soal kondisi terbaru kasus HIV di Magetan, Jawa Timur, termasuk upaya penanganan.</div>
+          <div class="artikel-card-source">🔗 beritajatim.com</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://www.kebijakanaidsindonesia.net/en/article/news/1608-seorang-ibu-hamil-di-mataram-terjangkit-hiv-aids" target="_blank" rel="noopener">
+        <div class="artikel-card-img">💉</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Ibu Hamil</div>
+          <div class="artikel-card-title">Seorang Ibu Hamil di Mataram Terjangkit HIV/AIDS</div>
+          <div class="artikel-card-desc">Laporan kasus ibu hamil di Mataram yang terinfeksi HIV/AIDS dan langkah penanganan yang dilakukan.</div>
+          <div class="artikel-card-source">🔗 kebijakanaidsindonesia.net</div>
+        </div>
+      </a>
+
     </div>
+
+    <!-- Kategori: Jurnal & Riset -->
     <div class="artikel-section-label reveal" style="margin-top:32px">🔬 Jurnal &amp; Riset Ilmiah</div>
     <div class="artikel-grid">
-      <a class="artikel-card reveal delay-1" href="https://journal.unpas.ac.id/index.php/humanitas/article/view/9616" target="_blank" rel="noopener"><div class="artikel-card-img">📄</div><div class="artikel-card-body"><div class="artikel-card-tag">Jurnal</div><div class="artikel-card-title">Jurnal Humanitas — Universitas Pasundan</div><div class="artikel-card-desc">Publikasi ilmiah terkait HIV/AIDS dalam perspektif kesehatan masyarakat.</div><div class="artikel-card-source">🔗 journal.unpas.ac.id</div></div></a>
-      <a class="artikel-card reveal delay-2" href="https://jurnal.stikes-bhm.ac.id/index.php/jpkm/article/view/644" target="_blank" rel="noopener"><div class="artikel-card-img">📋</div><div class="artikel-card-body"><div class="artikel-card-tag">Jurnal</div><div class="artikel-card-title">JPKM — STIKES Bhakti Husada Mulia</div><div class="artikel-card-desc">Jurnal Pengabdian Kesehatan Masyarakat tentang penanggulangan HIV/AIDS di Indonesia.</div><div class="artikel-card-source">🔗 jurnal.stikes-bhm.ac.id</div></div></a>
-      <a class="artikel-card reveal delay-3" href="https://www.youtube.com/watch?v=wIiFVoAYooY" target="_blank" rel="noopener"><div class="artikel-card-img">▶️</div><div class="artikel-card-body"><div class="artikel-card-tag">Video</div><div class="artikel-card-title">Video Edukasi HIV/AIDS — YouTube</div><div class="artikel-card-desc">Tontonan edukatif seputar HIV/AIDS untuk meningkatkan pemahaman masyarakat umum.</div><div class="artikel-card-source">🔗 youtube.com</div></div></a>
+
+      <a class="artikel-card reveal delay-1" href="https://journal.unpas.ac.id/index.php/humanitas/article/view/9616" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📄</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jurnal</div>
+          <div class="artikel-card-title">Artikel Jurnal Humanitas — Universitas Pasundan</div>
+          <div class="artikel-card-desc">Publikasi ilmiah dari Jurnal Humanitas UNPAS terkait isu HIV/AIDS dalam perspektif kesehatan masyarakat.</div>
+          <div class="artikel-card-source">🔗 journal.unpas.ac.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://jurnal.stikes-bhm.ac.id/index.php/jpkm/article/view/644" target="_blank" rel="noopener">
+        <div class="artikel-card-img">📋</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jurnal</div>
+          <div class="artikel-card-title">Artikel JPKM — STIKES Bhakti Husada Mulia</div>
+          <div class="artikel-card-desc">Jurnal Pengabdian Kesehatan Masyarakat memuat penelitian terkait program penanggulangan HIV/AIDS di Indonesia.</div>
+          <div class="artikel-card-source">🔗 jurnal.stikes-bhm.ac.id</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-3" href="https://ejournal.lumbungpare.org/index.php/jim/article/view/1485" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🧬</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Jurnal</div>
+          <div class="artikel-card-title">Artikel JIM — e-Journal Lumbung Pare</div>
+          <div class="artikel-card-desc">Penelitian ilmiah yang dipublikasikan dalam Jurnal Ilmiah Mahasiswa terkait dinamika HIV/AIDS di Indonesia.</div>
+          <div class="artikel-card-source">🔗 ejournal.lumbungpare.org</div>
+        </div>
+      </a>
+
     </div>
+
+    <!-- Kategori: Edukasi & Video -->
+    <div class="artikel-section-label reveal" style="margin-top:32px">🎬 Edukasi &amp; Media</div>
+    <div class="artikel-grid">
+
+      <a class="artikel-card reveal delay-1" href="https://ykis.org/menilik-hiv-aids-dan-ims/melihat-situasi-wabah-hiv-aids-di-indonesia-saat-ini/" target="_blank" rel="noopener">
+        <div class="artikel-card-img">🌐</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Edukasi</div>
+          <div class="artikel-card-title">Melihat Situasi Wabah HIV/AIDS di Indonesia Saat Ini</div>
+          <div class="artikel-card-desc">YKIS menyajikan gambaran komprehensif situasi wabah HIV/AIDS di Indonesia beserta analisis terkini.</div>
+          <div class="artikel-card-source">🔗 ykis.org</div>
+        </div>
+      </a>
+
+      <a class="artikel-card reveal delay-2" href="https://www.youtube.com/watch?v=wIiFVoAYooY" target="_blank" rel="noopener">
+        <div class="artikel-card-img">▶️</div>
+        <div class="artikel-card-body">
+          <div class="artikel-card-tag">Video</div>
+          <div class="artikel-card-title">Video Edukasi HIV/AIDS — YouTube</div>
+          <div class="artikel-card-desc">Tontonan edukatif seputar HIV/AIDS yang tersedia di YouTube untuk meningkatkan pemahaman masyarakat umum.</div>
+          <div class="artikel-card-source">🔗 youtube.com</div>
+        </div>
+      </a>
+
+    </div>
+
   </div>
 </div>
 
@@ -465,10 +743,10 @@
         <div style="color:#888;font-size:14px;font-weight:600">Fakultas Ilmu Kesehatan</div>
       </div>
       <div class="kontak-info">
-        <div class="kontak-row"><div class="kontak-icon">📍</div><div><div class="kontak-label">Alamat</div>Jl. Kartini No.11A, Salatiga, Jawa Tengah 50711</div></div>
-        <div class="kontak-row"><div class="kontak-icon">📞</div><div><div class="kontak-label">Telepon</div>To Be Announce</div></div>
-        <div class="kontak-row"><div class="kontak-icon">✉️</div><div><div class="kontak-label">Email</div>To Be Announce</div></div>
-        <div class="kontak-row"><div class="kontak-icon">🌐</div><div><div class="kontak-label">Website</div>To Be Announce</div></div>
+        <div class="kontak-row"><div class="kontak-icon">✉️</div>
+                <div><div class="kontak-label">Email</div><a href="https://educarehiv@gmail.com" target="_blank" rel="noopener">https://educarehiv@gmail.com</a></div>
+      </div>
+        
       </div>
     </div>
   </div>
