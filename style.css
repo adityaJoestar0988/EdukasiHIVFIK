@@ -123,8 +123,14 @@
     .video-edu-btn { padding: 12px 20px; font-size: 14px; }
     .video-edu-icon { width: 32px; height: 32px; font-size: 13px; }
 
-    /* Sembunyikan logo perisai SVG dekoratif di hero agar tidak nabrak */
-    .hero > svg { display: none !important; }
+    /* Perisai biru kanan atas: tampil tapi kecil & tidak nabrak */
+    .hero > svg {
+      display: block !important;
+      width: 80px !important;
+      top: 8px !important;
+      right: 10px !important;
+      opacity: 0.18 !important;
+    }
 
     /* Menu */
     .menu-section { padding: 16px 12px 40px; }
