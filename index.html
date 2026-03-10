@@ -390,13 +390,17 @@
 </div>
 
 <script>
- function showPage(pageId) {
+  
+function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const targetPage = document.getElementById('page-' + pageId);
     if (targetPage) { 
         targetPage.classList.add('active');
         targetPage.scrollIntoView({ behavior: 'smooth' });
     }
+    setTimeout(() => triggerReveal(), 50);
+}
+
   function showMenuSection() {
     document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
   }
@@ -432,4 +436,3 @@
 </script>
 </body>
 </html>
-
