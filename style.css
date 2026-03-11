@@ -187,19 +187,21 @@
       text-align: center;
     }
     /* Hero title mobile - gambar tetap sejajar */
-.hero-title {
+    .hero-title {
+  font-size: 36px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
   flex-wrap: nowrap !important;
-}
-.hero-title img {
-  width: 44px !important;
-  height: 44px !important;
-  object-fit: contain !important;
-  flex-shrink: 0 !important;
-}
+  white-space: nowrap !important;
+    }
+    .hero-title img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    }  
     .hero-text { max-width: 100% !important; }
     .hero-title { font-size: 44px !important; margin-bottom: 12px; }
     .hero-subtitle { font-size: 15px !important; }
